@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Home Cleaning & Housekeeping Service</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧹</text></svg>">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enables dark mode via a class on the <html> tag
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Trustworthy Sky Blue
+                        secondary: '#0284c7',
+                        accent: '#38bdf8',
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for mobile menu */
+        .mobile-menu-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .mobile-menu-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body
+    class="font-sans text-gray-800 bg-white dark:bg-darkBg dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+
+    <!-- Mobile Overlay -->
+    <div id="mobileOverlay" class="fixed inset-0 bg-black/50 z-[998] hidden transition-opacity"></div>
+
+    <!-- ==================== HEADER & NAVBAR ==================== -->
+    <header class="sticky top-0 z-[1000] bg-white dark:bg-darkCard shadow-md transition-colors duration-300">
+        <nav class="max-w-[1400px] mx-auto flex justify-between items-center px-6 py-4 min-h-[80px]">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 text-decoration-none">
+                <i
+                    class="fas fa-broom text-3xl text-primary bg-clip-text bg-gradient-to-br from-primary to-secondary"></i>
+                <span
+                    class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">CleanHome</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden xl:flex items-center gap-2 m-0 p-0 list-none">
+
+                <!-- Home Dropdown -->
+                <li class="relative group">
+                    <a href="#"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all flex items-center gap-1 dark:hover:bg-primary/20">
+                        Home <i class="fas fa-caret-down text-sm"></i>
+                    </a>
+                    <ul
+                        class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-darkCard shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <li><a href="index.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">Home
+                                1</a></li>
+                        <li><a href="home2.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">Home
+                                2</a></li>
+                    </ul>
+                </li>
+
+                <!-- Standard Links exactly as requested -->
+                <li><a href="about.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">About</a>
+                </li>
+                <li><a href="service.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Service</a>
+                </li>
+                <li><a href="offers.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Offers</a>
+                </li>
+                <li><a href="booking.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Booking</a>
+                </li>
+                <li><a href="faq.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Faq</a>
+                </li>
+                <li><a href="contact.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Contact</a>
+                </li>
+
+                <!-- Dashboard Dropdown -->
+                <li class="relative group">
+                    <a href="#"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all flex items-center gap-1 dark:hover:bg-primary/20">
+                        Dashboard <i class="fas fa-caret-down text-sm"></i>
+                    </a>
+                    <ul
+                        class="absolute top-full left-0 mt-2 w-52 bg-white dark:bg-darkCard shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <li><a href="user.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors">User
+                                Dashboard</a></li>
+                        <li><a href="admin.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors">Admin
+                                Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <!-- Auth Buttons -->
+                <li class="ml-4"><a href="Reviews.html"
+                        class="px-6 py-2 rounded-full font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all">Reviews</a>
+                </li>
+
+                <!-- Theme & RTL Controls -->
+                <li class="flex items-center gap-2 ml-2 border-l border-gray-200 dark:border-gray-700 pl-4">
+                    <button id="themeToggle"
+                        class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        title="Toggle Theme">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <button id="rtlToggle"
+                        class="px-3 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm"
+                        title="Toggle RTL">
+                        RTL
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Hamburger Button (Mobile Only) -->
+            <button id="hamburger"
+                class="xl:hidden w-10 h-10 border-2 border-gray-200 dark:border-gray-700 rounded-lg flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary hover:border-primary transition-colors">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ==================== MOBILE NAV MENU (HAMBURGER) ==================== -->
+    <div id="mobileNavMenu"
+        class="fixed top-0 -right-full w-[320px] h-screen bg-gray-50 dark:bg-darkCard z-[999] transition-all duration-400 border-l-[3px] border-primary pt-[90px] px-6 pb-8 overflow-y-auto mobile-menu-scroll rtl:border-l-0 rtl:border-r-[3px] rtl:-left-full rtl:right-auto shadow-2xl">
+        <ul class="flex flex-col gap-3 list-none p-0 m-0">
+            <li>
+                <div class="px-5 py-3 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Home</div>
+            </li>
+            <li><a href="index.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Home
+                    1</a></li>
+            <li><a href="home2.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Home
+                    2</a></li>
+
+            <li>
+                <div
+                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Pages</div>
+            </li>
+            <li><a href="about.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">About</a>
+            </li>
+            <li><a href="service.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Service</a>
+            </li>
+            <li><a href="offers.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Offers</a>
+            </li>
+            <li><a href="booking.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Booking</a>
+            </li>
+            <li><a href="faq.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Faq</a>
+            </li>
+            <li><a href="contact.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Contact</a>
+            </li>
+
+            <li>
+                <div
+                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Dashboard</div>
+            </li>
+            <li><a href="user.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">User
+                    Dashboard</a></li>
+            <li><a href="admin.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Admin
+                    Dashboard</a></li>
+
+            <li>
+                <div
+                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Account</div>
+            </li>
+            <li><a href="Reviews.html"
+                    class="block px-5 py-3 text-center rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors">Reviews</a>
+            </li>
+
+        </ul>
+
+        <div class="mt-8 flex flex-col gap-4">
+            <button id="mobileThemeToggle"
+                class="w-full flex items-center justify-center gap-3 border-2 border-gray-200 dark:border-gray-700 rounded-full py-3 bg-white dark:bg-darkBg hover:bg-primary hover:text-white hover:border-primary transition-colors font-medium">
+                <i class="fas fa-moon dark:hidden"></i>
+                <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                <span class="dark:hidden">Dark Mode</span>
+                <span class="hidden dark:block">Light Mode</span>
+            </button>
+            <button id="mobileRtlToggle"
+                class="w-full flex items-center justify-center gap-3 border-2 border-gray-200 dark:border-gray-700 rounded-full py-3 bg-white dark:bg-darkBg hover:bg-primary hover:text-white hover:border-primary transition-colors font-medium">
+                <span>RTL</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== HERO BANNER (CONTACT PAGE) ==================== -->
+    <section class="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
+        <!-- Background Image -->
+        <img src="images/homecleaning (12).jpg" alt="Contact Customer Service"
+            class="absolute inset-0 w-full h-full object-cover z-0" style="object-position: center 20%;">
+
+        <!-- Dark Gradient Overlay -->
+        <div class="absolute inset-0 bg-gray-900/75 z-10"></div>
+
+        <div
+            class="relative z-20 w-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col items-center justify-center text-center">
+
+            <!-- Text Content -->
+            <div class="w-full max-w-3xl text-white mt-10">
+                <p class="text-primary font-semibold text-lg md:text-xl mb-3 tracking-wide uppercase">We're Here to Help
+                </p>
+                <h1 class="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    Contact <span class="text-primary">Us</span>
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl mb-8">
+                    Have questions or need to schedule a custom cleaning? Reach out to our friendly support team today.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT GOES HERE -->
+    <main class="flex-grow">
+
+        <!-- ==================== SECTION 1: CONTACT INFORMATION CARDS ==================== -->
+        <section class="py-20 bg-gray-50 dark:bg-darkBg transition-colors duration-300">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Get In Touch</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Contact
+                        Information</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg">Reach out to us through any of the channels
+                        below. We strive to respond to all inquiries within 2 hours.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1: Phone & Email -->
+                    <div
+                        class="bg-white dark:bg-darkCard p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-800 text-center hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Talk to Sales</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">Call us for immediate support</p>
+                        <a href="tel:+1234567890" class="block text-primary font-bold text-lg mb-4 hover:underline">+1
+                            (555) 123-4567</a>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">Or drop us an email</p>
+                        <a href="mailto:support@cleanhome.com"
+                            class="block text-primary font-bold text-lg hover:underline">support@cleanhome.com</a>
+                    </div>
+
+                    <!-- Card 2: Office Address -->
+                    <div
+                        class="bg-white dark:bg-darkCard p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-800 text-center hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Office Location</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">Visit our headquarters at:</p>
+                        <address
+                            class="not-italic text-gray-900 dark:text-white font-semibold text-lg leading-relaxed mb-4">
+                            1234 Clean Street, Suite 100<br>
+                            San Francisco, CA 94103<br>
+                            United States
+                        </address>
+                        <a href="#map-section"
+                            class="text-primary font-semibold hover:text-secondary uppercase text-sm tracking-wider">Get
+                            Directions &rarr;</a>
+                    </div>
+
+                    <!-- Card 3: Business Hours -->
+                    <div
+                        class="bg-white dark:bg-darkCard p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-800 text-center hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Business Hours</h3>
+                        <ul class="text-gray-600 dark:text-gray-400 space-y-3 mb-4">
+                            <li class="flex justify-between border-b border-gray-100 dark:border-gray-700 pb-2">
+                                <span>Mon - Fri:</span> <span class="font-semibold text-gray-900 dark:text-white">8:00
+                                    AM - 8:00 PM</span></li>
+                            <li class="flex justify-between border-b border-gray-100 dark:border-gray-700 pb-2">
+                                <span>Saturday:</span> <span class="font-semibold text-gray-900 dark:text-white">9:00 AM
+                                    - 5:00 PM</span></li>
+                            <li class="flex justify-between"><span>Sunday:</span> <span
+                                    class="font-semibold text-primary">Closed</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 2: SEND US A MESSAGE FORM ==================== -->
+        <section
+            class="py-20 bg-white dark:bg-darkCard transition-colors duration-300 border-t border-gray-100 dark:border-gray-800">
+            <div class="max-w-[1000px] mx-auto px-6 md:px-12">
+                <div
+                    class="bg-gray-50 dark:bg-darkBg rounded-[2.5rem] p-8 md:p-14 shadow-xl border border-gray-100 dark:border-gray-800">
+                    <div class="text-center mb-10">
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">Send Us
+                            A Message</h2>
+                        <p class="text-gray-600 dark:text-gray-400">Fill out the form below and one of our cleaning
+                            specialists will get back to you shortly.</p>
+                    </div>
+
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Name -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your
+                                    Name</label>
+                                <input type="text"
+                                    class="w-full px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkCard dark:text-white outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                                    placeholder="John Doe" required>
+                            </div>
+                            <!-- Email -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email
+                                    Address</label>
+                                <input type="email"
+                                    class="w-full px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkCard dark:text-white outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                                    placeholder="john@example.com" required>
+                            </div>
+                        </div>
+
+                        <!-- Subject -->
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                            <select
+                                class="w-full px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkCard dark:text-white outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all appearance-none">
+                                <option>General Inquiry</option>
+                                <option>Request a Custom Quote</option>
+                                <option>Feedback / Support</option>
+                                <option>Partnership Opportunities</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your
+                                Message</label>
+                            <textarea rows="5"
+                                class="w-full px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkCard dark:text-white outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                                placeholder="How can we help you today?" required></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center pt-4">
+                            <button type="submit"
+                                class="w-full md:w-auto px-12 py-4 bg-primary hover:bg-secondary text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-primary/40 flex items-center justify-center gap-2 mx-auto">
+                                Send Message <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 3: INTERACTIVE MAP ==================== -->
+        <section id="map-section" class="py-20 bg-gray-50 dark:bg-darkBg transition-colors duration-300 relative">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Our
+                        Headquarters</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Find Us on
+                        the Map</h2>
+                    <p class="text-gray-600 dark:text-gray-400">Stop by our main office for an in-person consultation
+                        about your corporate or residential cleaning needs.</p>
+                </div>
+
+                <div
+                    class="relative w-full h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-darkCard">
+                    <!-- Google Maps Iframe Placeholder -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.50764017948534!3d37.75781499660171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1689020942548!5m2!1sen!2sus"
+                        class="w-full h-full border-0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                    <!-- Floating Overlay Card -->
+                    <div
+                        class="absolute bottom-8 left-8 md:bottom-12 md:left-12 bg-white dark:bg-darkCard p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 max-w-xs z-10 hidden sm:block">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white text-lg">CleanHome HQ</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">1234 Clean Street, Suite 100<br>San
+                            Francisco, CA 94103</p>
+                        <a href="#"
+                            class="inline-block w-full py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold rounded-lg text-center text-sm hover:bg-primary dark:hover:bg-primary dark:hover:text-white transition-colors">
+                            Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 4: SERVICE AREAS ==================== -->
+        <section
+            class="py-20 bg-white dark:bg-darkCard transition-colors duration-300 border-t border-gray-100 dark:border-gray-800">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div class="max-w-2xl">
+                        <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Where We
+                            Work</span>
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Areas
+                            We Serve</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg">We currently provide top-tier cleaning
+                            services across the greater metropolitan area and surrounding suburbs.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    <!-- Area 1 -->
+                    <div
+                        class="bg-gray-50 dark:bg-darkBg p-6 rounded-2xl flex items-center gap-4 hover:border-primary border border-transparent transition-colors group cursor-default">
+                        <i class="fas fa-map-pin text-2xl text-gray-400 group-hover:text-primary transition-colors"></i>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg">Downtown</h4>
+                    </div>
+                    <!-- Area 2 -->
+                    <div
+                        class="bg-gray-50 dark:bg-darkBg p-6 rounded-2xl flex items-center gap-4 hover:border-primary border border-transparent transition-colors group cursor-default">
+                        <i class="fas fa-map-pin text-2xl text-gray-400 group-hover:text-primary transition-colors"></i>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg">North Hills</h4>
+                    </div>
+                    <!-- Area 3 -->
+                    <div
+                        class="bg-gray-50 dark:bg-darkBg p-6 rounded-2xl flex items-center gap-4 hover:border-primary border border-transparent transition-colors group cursor-default">
+                        <i class="fas fa-map-pin text-2xl text-gray-400 group-hover:text-primary transition-colors"></i>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg">Westside</h4>
+                    </div>
+                    <!-- Area 4 -->
+                    <div
+                        class="bg-gray-50 dark:bg-darkBg p-6 rounded-2xl flex items-center gap-4 hover:border-primary border border-transparent transition-colors group cursor-default">
+                        <i class="fas fa-map-pin text-2xl text-gray-400 group-hover:text-primary transition-colors"></i>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg">East Bay</h4>
+                    </div>
+                    <!-- Area 5 -->
+                    <div
+                        class="bg-gray-50 dark:bg-darkBg p-6 rounded-2xl flex items-center gap-4 hover:border-primary border border-transparent transition-colors group cursor-default">
+                        <i class="fas fa-map-pin text-2xl text-gray-400 group-hover:text-primary transition-colors"></i>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg">South Park</h4>
+                    </div>
+                    <!-- Area 6 -->
+                    <div
+                        class="bg-gray-50 dark:bg-darkBg p-6 rounded-2xl flex items-center gap-4 hover:border-primary border border-transparent transition-colors group cursor-default">
+                        <i class="fas fa-map-pin text-2xl text-gray-400 group-hover:text-primary transition-colors"></i>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg">The Valley</h4>
+                    </div>
+                    <!-- Area 7 -->
+                    <div
+                        class="bg-gray-50 dark:bg-darkBg p-6 rounded-2xl flex items-center gap-4 hover:border-primary border border-transparent transition-colors group cursor-default">
+                        <i class="fas fa-map-pin text-2xl text-gray-400 group-hover:text-primary transition-colors"></i>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg">Riverside</h4>
+                    </div>
+                    <!-- Area 8 -->
+                    <div
+                        class="bg-primary/10 dark:bg-primary/20 p-6 rounded-2xl flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-colors cursor-pointer text-primary font-bold">
+                        <span>Check Your Zip Code</span> <i class="fas fa-arrow-right rtl:rotate-180"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 5: SOCIAL MEDIA CTA ==================== -->
+        <section class="py-16 bg-primary transition-colors duration-300">
+            <div
+                class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+                <div class="text-white">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold mb-3">Join Our Community</h2>
+                    <p class="text-blue-100 text-lg max-w-xl">Follow us on social media for daily cleaning tips,
+                        before-and-after transformations, and exclusive follower discounts!</p>
+                </div>
+                <div class="flex items-center justify-center gap-4">
+                    <a href="#"
+                        class="w-14 h-14 bg-white text-primary rounded-full flex items-center justify-center text-2xl hover:bg-gray-900 hover:text-white transition-colors shadow-lg hover:-translate-y-1">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#"
+                        class="w-14 h-14 bg-white text-primary rounded-full flex items-center justify-center text-2xl hover:bg-gray-900 hover:text-white transition-colors shadow-lg hover:-translate-y-1">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#"
+                        class="w-14 h-14 bg-white text-primary rounded-full flex items-center justify-center text-2xl hover:bg-gray-900 hover:text-white transition-colors shadow-lg hover:-translate-y-1">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="#"
+                        class="w-14 h-14 bg-white text-primary rounded-full flex items-center justify-center text-2xl hover:bg-gray-900 hover:text-white transition-colors shadow-lg hover:-translate-y-1">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-white dark:bg-darkCard pt-16 pb-8 mt-auto transition-colors duration-300">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+
+            <!-- Top Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <i
+                            class="fas fa-broom text-3xl text-primary bg-clip-text bg-gradient-to-br from-primary to-secondary"></i>
+                        <span
+                            class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">CleanHome</span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                        Transforming homes into spotless sanctuaries. Reliable, professional, and thorough cleaning
+                        services for your everyday life.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3
+                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
+                        QuickLinks</h3>
+                    <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="index.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Home</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">About</a>
+                        </li>
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Service</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3
+                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
+                        Services</h3>
+                    <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Standard
+                                Cleaning</a></li>
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Deep
+                                Housekeeping</a></li>
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Move-In
+                                / Move-Out</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Contact -->
+                <div>
+                    <h3
+                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
+                        Connect</h3>
+                    <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="#"
+                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
+                                    class="fab fa-facebook-f w-5 text-center"></i> Facebook</a></li>
+                        <li><a href="#"
+                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
+                                    class="fab fa-instagram w-5 text-center"></i> Instagram</a></li>
+                        <li><a href="#"
+                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
+                                    class="fab fa-x-twitter w-5 text-center"></i> X</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Middle & Bottom Footer -->
+            <div
+                class="border-y border-gray-200 dark:border-gray-800 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <h3 class="text-primary font-bold text-xl font-serif">CleanHome Service</h3>
+                <div class="flex gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms & Conditions</a>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-gray-500 dark:text-gray-500 text-sm">
+                © 2026 CleanHome Housekeeping Service. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Mobile Menu Logic
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileNavMenu');
+            const overlay = document.getElementById('mobileOverlay');
+
+            function toggleMenu() {
+                const isRtl = document.documentElement.dir === 'rtl';
+
+                // Handle menu sliding (LTR vs RTL)
+                if (isRtl) {
+                    mobileMenu.classList.toggle('rtl:-left-full');
+                    mobileMenu.classList.toggle('rtl:left-0');
+                } else {
+                    mobileMenu.classList.toggle('-right-full');
+                    mobileMenu.classList.toggle('right-0');
+                }
+
+                // Handle overlay & icon
+                overlay.classList.toggle('hidden');
+                document.body.classList.toggle('overflow-hidden'); // Prevent background scrolling
+
+                // Switch hamburger icon to close (X)
+                const icon = hamburger.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            }
+
+            hamburger.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+
+            // 2. Theme Toggle (Dark/Light)
+            const themeToggle = document.getElementById('themeToggle');
+            const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+
+            function toggleTheme() {
+                document.documentElement.classList.toggle('dark');
+                const isDark = document.documentElement.classList.contains('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            }
+
+            themeToggle.addEventListener('click', toggleTheme);
+            mobileThemeToggle.addEventListener('click', toggleTheme);
+
+            // Check local storage for theme
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+
+            // 3. RTL (Right-to-Left) Toggle
+            const rtlToggle = document.getElementById('rtlToggle');
+            const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+
+            function toggleRTL() {
+                const html = document.documentElement;
+                html.dir = html.dir === 'rtl' ? 'ltr' : 'rtl';
+                localStorage.setItem('direction', html.dir);
+            }
+
+            rtlToggle.addEventListener('click', toggleRTL);
+            mobileRtlToggle.addEventListener('click', toggleRTL);
+
+            // Check local storage for direction
+            if (localStorage.getItem('direction') === 'rtl') {
+                document.documentElement.dir = 'rtl';
+            }
+
+            // 4. Active Link Highlight
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a, #mobileNavMenu a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPath) {
+                    // Desktop main nav link style
+                    if (link.classList.contains('px-4') && link.classList.contains('py-2')) {
+                        link.classList.add('text-primary', 'bg-primary/10', 'dark:bg-primary/20');
+                    }
+                    // Desktop dropdown link style
+                    else if (link.classList.contains('px-5') && link.classList.contains('py-2') && !link.classList.contains('border-2')) {
+                        link.classList.add('bg-primary', 'text-white');
+                    }
+                    // Mobile nav link style
+                    else if (link.classList.contains('px-5') && link.classList.contains('py-3') && link.classList.contains('border-2')) {
+                        link.classList.remove('bg-white', 'dark:bg-darkBg', 'border-gray-200', 'dark:border-gray-700');
+                        link.classList.add('bg-primary', 'text-white', 'border-primary');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

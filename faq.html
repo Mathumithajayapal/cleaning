@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Home Cleaning & Housekeeping Service</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧹</text></svg>">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enables dark mode via a class on the <html> tag
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Trustworthy Sky Blue
+                        secondary: '#0284c7',
+                        accent: '#38bdf8',
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for mobile menu */
+        .mobile-menu-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .mobile-menu-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body
+    class="font-sans text-gray-800 bg-white dark:bg-darkBg dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+
+    <!-- Mobile Overlay -->
+    <div id="mobileOverlay" class="fixed inset-0 bg-black/50 z-[998] hidden transition-opacity"></div>
+
+    <!-- ==================== HEADER & NAVBAR ==================== -->
+    <header class="sticky top-0 z-[1000] bg-white dark:bg-darkCard shadow-md transition-colors duration-300">
+        <nav class="max-w-[1400px] mx-auto flex justify-between items-center px-6 py-4 min-h-[80px]">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 text-decoration-none">
+                <i
+                    class="fas fa-broom text-3xl text-primary bg-clip-text bg-gradient-to-br from-primary to-secondary"></i>
+                <span
+                    class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">CleanHome</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden xl:flex items-center gap-2 m-0 p-0 list-none">
+
+                <!-- Home Dropdown -->
+                <li class="relative group">
+                    <a href="#"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all flex items-center gap-1 dark:hover:bg-primary/20">
+                        Home <i class="fas fa-caret-down text-sm"></i>
+                    </a>
+                    <ul
+                        class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-darkCard shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <li><a href="index.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">Home
+                                1</a></li>
+                        <li><a href="home2.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">Home
+                                2</a></li>
+                    </ul>
+                </li>
+
+                <!-- Standard Links exactly as requested -->
+                <li><a href="about.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">About</a>
+                </li>
+                <li><a href="service.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Service</a>
+                </li>
+                <li><a href="offers.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Offers</a>
+                </li>
+                <li><a href="booking.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Booking</a>
+                </li>
+                <li><a href="faq.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Faq</a>
+                </li>
+                <li><a href="contact.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Contact</a>
+                </li>
+
+                <!-- Dashboard Dropdown -->
+                <li class="relative group">
+                    <a href="#"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all flex items-center gap-1 dark:hover:bg-primary/20">
+                        Dashboard <i class="fas fa-caret-down text-sm"></i>
+                    </a>
+                    <ul
+                        class="absolute top-full left-0 mt-2 w-52 bg-white dark:bg-darkCard shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <li><a href="user.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors">User
+                                Dashboard</a></li>
+                        <li><a href="admin.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors">Admin
+                                Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <!-- Auth Buttons -->
+                <li class="ml-4"><a href="Reviews.html"
+                        class="px-6 py-2 rounded-full font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all">Reviews</a>
+                </li>
+
+
+                <!-- Theme & RTL Controls -->
+                <li class="flex items-center gap-2 ml-2 border-l border-gray-200 dark:border-gray-700 pl-4">
+                    <button id="themeToggle"
+                        class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        title="Toggle Theme">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <button id="rtlToggle"
+                        class="px-3 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm"
+                        title="Toggle RTL">
+                        RTL
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Hamburger Button (Mobile Only) -->
+            <button id="hamburger"
+                class="xl:hidden w-10 h-10 border-2 border-gray-200 dark:border-gray-700 rounded-lg flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary hover:border-primary transition-colors">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ==================== MOBILE NAV MENU (HAMBURGER) ==================== -->
+    <div id="mobileNavMenu"
+        class="fixed top-0 -right-full w-[320px] h-screen bg-gray-50 dark:bg-darkCard z-[999] transition-all duration-400 border-l-[3px] border-primary pt-[90px] px-6 pb-8 overflow-y-auto mobile-menu-scroll rtl:border-l-0 rtl:border-r-[3px] rtl:-left-full rtl:right-auto shadow-2xl">
+        <ul class="flex flex-col gap-3 list-none p-0 m-0">
+            <li>
+                <div class="px-5 py-3 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Home</div>
+            </li>
+            <li><a href="index.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Home
+                    1</a></li>
+            <li><a href="home2.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Home
+                    2</a></li>
+
+            <li>
+                <div
+                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Pages</div>
+            </li>
+            <li><a href="about.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">About</a>
+            </li>
+            <li><a href="service.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Service</a>
+            </li>
+            <li><a href="offers.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Offers</a>
+            </li>
+            <li><a href="booking.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Booking</a>
+            </li>
+            <li><a href="faq.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Faq</a>
+            </li>
+            <li><a href="contact.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Contact</a>
+            </li>
+
+            <li>
+                <div
+                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Dashboard</div>
+            </li>
+            <li><a href="user.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">User
+                    Dashboard</a></li>
+            <li><a href="admin.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Admin
+                    Dashboard</a></li>
+
+            <li>
+                <div
+                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Account</div>
+            </li>
+            <li><a href="Reviews.html"
+                    class="block px-5 py-3 text-center rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors">Reviews</a>
+            </li>
+
+        </ul>
+
+        <div class="mt-8 flex flex-col gap-4">
+            <button id="mobileThemeToggle"
+                class="w-full flex items-center justify-center gap-3 border-2 border-gray-200 dark:border-gray-700 rounded-full py-3 bg-white dark:bg-darkBg hover:bg-primary hover:text-white hover:border-primary transition-colors font-medium">
+                <i class="fas fa-moon dark:hidden"></i>
+                <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                <span class="dark:hidden">Dark Mode</span>
+                <span class="hidden dark:block">Light Mode</span>
+            </button>
+            <button id="mobileRtlToggle"
+                class="w-full flex items-center justify-center gap-3 border-2 border-gray-200 dark:border-gray-700 rounded-full py-3 bg-white dark:bg-darkBg hover:bg-primary hover:text-white hover:border-primary transition-colors font-medium">
+                <span>RTL</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== HERO BANNER (FAQ PAGE) ==================== -->
+    <section class="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
+        <!-- Background Image -->
+        <img src="images/homecleaning (13).jpg" alt="Frequently Asked Questions"
+            class="absolute inset-0 w-full h-full object-cover z-0" style="object-position: center 35%;">
+
+        <!-- Dark Gradient Overlay -->
+        <div class="absolute inset-0 bg-gray-900/75 z-10"></div>
+
+        <div
+            class="relative z-20 w-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col items-center justify-center text-center">
+
+            <!-- Text Content -->
+            <div class="w-full max-w-3xl text-white mt-10">
+                <p class="text-primary font-semibold text-lg md:text-xl mb-3 tracking-wide uppercase">Got Questions?</p>
+                <h1 class="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    Help & <span class="text-primary">FAQ</span>
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl mb-8">
+                    Find quick answers to common questions about our cleaning processes, pricing, and scheduling
+                    policies below.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="flex-grow py-16 bg-gray-50 dark:bg-darkBg">
+        <div class="max-w-[900px] mx-auto px-6 md:px-12 flex flex-col gap-10">
+
+            <!-- ==================== 1. GENERAL QUERIES SECTION (~50 LINES) ==================== -->
+            <section
+                class="bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-8">
+                <h2 class="text-2xl font-serif font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary"><i
+                            class="fas fa-info-circle"></i></div> General Services
+                </h2>
+                <div class="flex flex-col gap-4">
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">Do I need to
+                                provide any cleaning supplies or equipment?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                Not at all! Our professional teams arrive fully equipped with premium, eco-friendly
+                                cleaning supplies and commercial-grade vacuums. If you prefer us to use specific
+                                products you own, simply let us know in advance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">Do you clean
+                                homes with pets?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                Yes, we are pet-friendly! We use non-toxic products safe for animals. We just ask that
+                                aggressive or highly anxious pets be secured in a separate room or crate for their
+                                safety and our cleaners' efficiency.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">What is included
+                                in a standard cleaning?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                Standard cleaning covers dusting, vacuuming, mopping floors, emptying trash, and
+                                thorough cleaning of bathrooms and kitchen surfaces. For inside ovens, fridges, or
+                                windows, please request a Deep Clean.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== 2. PRICING & PAYMENT SECTION (~50 LINES) ==================== -->
+            <section
+                class="bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-8">
+                <h2 class="text-2xl font-serif font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary"><i
+                            class="fas fa-wallet"></i></div> Pricing & Payments
+                </h2>
+                <div class="flex flex-col gap-4">
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">How do you
+                                determine your cleaning rates?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                Our pricing is transparent and based primarily on the square footage of your home and
+                                the specific type of service requested (Standard, Deep, or Move-In/Out). You can get an
+                                instant quote on our booking page.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">Are tips
+                                expected or required?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                Tipping is entirely optional but always appreciated by our hardworking staff. If you
+                                choose to tip, you can give cash directly to your cleaner or add a tip during your
+                                online checkout process.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">When and how do
+                                I pay for the service?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                A hold is placed on your credit card the day before your appointment, but you won't be
+                                charged until the cleaning is completely finished. We accept all major credit cards and
+                                digital wallets.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== 3. BOOKING & SCHEDULING SECTION (~50 LINES) ==================== -->
+            <section
+                class="bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-8">
+                <h2 class="text-2xl font-serif font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary"><i
+                            class="fas fa-calendar-alt"></i></div> Booking & Scheduling
+                </h2>
+                <div class="flex flex-col gap-4">
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">Do I have to be
+                                home while you clean?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                It's completely up to you! Most of our clients prefer to provide a spare key, a door
+                                code, or leave a key in a lockbox. We will lock up carefully after we finish the job.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">What is your
+                                cancellation and rescheduling policy?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                We understand plans change. You can cancel or reschedule without any penalty up to 24
+                                hours before your scheduled appointment. Cancellations made within 24 hours incur a $50
+                                late-cancellation fee.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">Will I get the
+                                same cleaner every time?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                For recurring services, we make every effort to send the same cleaning team to your home
+                                so they learn your specific preferences. However, in cases of illness or vacation, we
+                                will send a reliable substitute.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== 4. SAFETY & TRUST SECTION (~50 LINES) ==================== -->
+            <section
+                class="bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-8">
+                <h2 class="text-2xl font-serif font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary"><i
+                            class="fas fa-shield-alt"></i></div> Safety & Trust
+                </h2>
+                <div class="flex flex-col gap-4">
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">Are your
+                                cleaners background checked and insured?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                Absolutely. Your peace of mind is our priority. Every cleaner undergoes a rigorous
+                                nationwide background check, in-person interviews, and comprehensive training. We are
+                                fully bonded and insured.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">What happens if
+                                something is broken during a cleaning?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                While we treat your home with the utmost care, accidents occasionally happen. We are
+                                fully insured, and if our staff damages anything, we will immediately report it, repair
+                                it, or cover the replacement cost.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">How do you
+                                handle keys and alarm systems?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                Client keys are stored in a secure lockbox at our office and only checked out on the day
+                                of service. We maintain strict protocols for alarm codes, which are encrypted within our
+                                secure booking system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== 5. GUARANTEE SECTION (~50 LINES) ==================== -->
+            <section
+                class="bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-8">
+                <h2 class="text-2xl font-serif font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary"><i
+                            class="fas fa-medal"></i></div> Quality & Guarantees
+                </h2>
+                <div class="flex flex-col gap-4">
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">What is your
+                                100% Satisfaction Guarantee?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                We stand firmly behind our work. If you are not completely satisfied with an area we
+                                cleaned, let us know within 24 hours. We will promptly return and re-clean the specific
+                                area for free.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">How can I leave
+                                feedback or review my cleaner?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                After each visit, you'll receive an automated email asking you to rate your experience
+                                out of 5 stars. You can also leave detailed feedback through your customer portal to
+                                help us continuously improve.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold text-left pr-4 text-gray-800 dark:text-gray-100">Can I request
+                                special attention to specific areas?</span>
+                            <i
+                                class="fas fa-plus text-primary icon transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div
+                            class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-darkCard">
+                            <p
+                                class="p-5 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700">
+                                Absolutely! We customize our services based on your needs. You can add specific notes to
+                                your booking or discuss it directly with our office team so your cleaners know exactly
+                                what to prioritize.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer
+        class="bg-white dark:bg-darkCard border-t border-gray-100 dark:border-gray-800 pt-16 pb-8 mt-auto transition-colors duration-300">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+
+            <!-- Top Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <i
+                            class="fas fa-broom text-3xl text-primary bg-clip-text bg-gradient-to-br from-primary to-secondary"></i>
+                        <span
+                            class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">CleanHome</span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                        Transforming homes into spotless sanctuaries. Reliable, professional, and thorough cleaning
+                        services for your everyday life.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3
+                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
+                        QuickLinks</h3>
+                    <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="index.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Home</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">About</a>
+                        </li>
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Service</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3
+                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
+                        Services</h3>
+                    <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Standard
+                                Cleaning</a></li>
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Deep
+                                Housekeeping</a></li>
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Move-In
+                                / Move-Out</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Contact -->
+                <div>
+                    <h3
+                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
+                        Connect</h3>
+                    <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="#"
+                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
+                                    class="fab fa-facebook-f w-5 text-center"></i> Facebook</a></li>
+                        <li><a href="#"
+                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
+                                    class="fab fa-instagram w-5 text-center"></i> Instagram</a></li>
+                        <li><a href="#"
+                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
+                                    class="fab fa-x-twitter w-5 text-center"></i> X</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Middle & Bottom Footer -->
+            <div
+                class="border-y border-gray-200 dark:border-gray-800 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <h3 class="text-primary font-bold text-xl font-serif">CleanHome Service</h3>
+                <div class="flex gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms & Conditions</a>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-gray-500 dark:text-gray-500 text-sm">
+                © 2026 CleanHome Housekeeping Service. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Mobile Menu Logic
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileNavMenu');
+            const overlay = document.getElementById('mobileOverlay');
+
+            function toggleMenu() {
+                const isRtl = document.documentElement.dir === 'rtl';
+
+                // Handle menu sliding (LTR vs RTL)
+                if (isRtl) {
+                    mobileMenu.classList.toggle('rtl:-left-full');
+                    mobileMenu.classList.toggle('rtl:left-0');
+                } else {
+                    mobileMenu.classList.toggle('-right-full');
+                    mobileMenu.classList.toggle('right-0');
+                }
+
+                // Handle overlay & icon
+                overlay.classList.toggle('hidden');
+                document.body.classList.toggle('overflow-hidden'); // Prevent background scrolling
+
+                // Switch hamburger icon to close (X)
+                const icon = hamburger.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            }
+
+            hamburger.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+
+            // 2. Theme Toggle (Dark/Light)
+            const themeToggle = document.getElementById('themeToggle');
+            const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+
+            function toggleTheme() {
+                document.documentElement.classList.toggle('dark');
+                const isDark = document.documentElement.classList.contains('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            }
+
+            themeToggle.addEventListener('click', toggleTheme);
+            mobileThemeToggle.addEventListener('click', toggleTheme);
+
+            // Check local storage for theme
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+
+            // 3. RTL (Right-to-Left) Toggle
+            const rtlToggle = document.getElementById('rtlToggle');
+            const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+
+            function toggleRTL() {
+                const html = document.documentElement;
+                html.dir = html.dir === 'rtl' ? 'ltr' : 'rtl';
+                localStorage.setItem('direction', html.dir);
+            }
+
+            rtlToggle.addEventListener('click', toggleRTL);
+            mobileRtlToggle.addEventListener('click', toggleRTL);
+
+            // Check local storage for direction
+            if (localStorage.getItem('direction') === 'rtl') {
+                document.documentElement.dir = 'rtl';
+            }
+
+            // 4. Active Link Highlight
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a, #mobileNavMenu a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPath) {
+                    // Desktop main nav link style
+                    if (link.classList.contains('px-4') && link.classList.contains('py-2')) {
+                        link.classList.add('text-primary', 'bg-primary/10', 'dark:bg-primary/20');
+                    }
+                    // Desktop dropdown link style
+                    else if (link.classList.contains('px-5') && link.classList.contains('py-2') && !link.classList.contains('border-2')) {
+                        link.classList.add('bg-primary', 'text-white');
+                    }
+                    // Mobile nav link style
+                    else if (link.classList.contains('px-5') && link.classList.contains('py-3') && link.classList.contains('border-2')) {
+                        link.classList.remove('bg-white', 'dark:bg-darkBg', 'border-gray-200', 'dark:border-gray-700');
+                        link.classList.add('bg-primary', 'text-white', 'border-primary');
+                    }
+                }
+            });
+
+            // 5. FAQ Accordion Logic
+            const faqButtons = document.querySelectorAll('.faq-btn');
+            faqButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('.icon');
+                    const isOpen = answer.style.maxHeight;
+
+                    // Close all accordions first (optional but makes for clean UI)
+                    document.querySelectorAll('.faq-answer').forEach(el => el.style.maxHeight = null);
+                    document.querySelectorAll('.faq-btn .icon').forEach(el => {
+                        el.classList.remove('fa-minus');
+                        el.classList.add('fa-plus');
+                        el.style.transform = 'rotate(0deg)';
+                    });
+
+                    // If the clicked one wasn't open, open it
+                    if (!isOpen) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
