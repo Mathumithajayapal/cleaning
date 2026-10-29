@@ -20,7 +20,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class', // Enables dark mode via a class on the <html> tag
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -60,487 +60,358 @@
     <!-- ==================== HEADER & NAVBAR ==================== -->
     <header class="sticky top-0 z-[1000] bg-white dark:bg-darkCard shadow-md transition-colors duration-300">
         <nav class="max-w-[1400px] mx-auto flex justify-between items-center px-6 py-4 min-h-[80px]">
-
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2 text-decoration-none">
-                <i
-                    class="fas fa-broom text-3xl text-primary bg-clip-text bg-gradient-to-br from-primary to-secondary"></i>
-                <span
-                    class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">CleanHome</span>
+                <i class="fas fa-broom text-3xl text-primary bg-clip-text bg-gradient-to-br from-primary to-secondary"></i>
+                <span class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">CleanHome</span>
             </a>
 
             <!-- Desktop Navigation -->
             <ul class="hidden xl:flex items-center gap-2 m-0 p-0 list-none">
-
-                <!-- Home Dropdown -->
                 <li class="relative group">
-                    <a href="#"
-                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all flex items-center gap-1 dark:hover:bg-primary/20">
+                    <a href="#" class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all flex items-center gap-1 dark:hover:bg-primary/20">
                         Home <i class="fas fa-caret-down text-sm"></i>
                     </a>
-                    <ul
-                        class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-darkCard shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <li><a href="index.html"
-                                class="block px-5 py-2 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">Home
-                                1</a></li>
-                        <li><a href="home2.html"
-                                class="block px-5 py-2 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">Home
-                                2</a></li>
+                    <ul class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-darkCard shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <li><a href="index.html" class="block px-5 py-2 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">Home 1</a></li>
+                        <li><a href="home2.html" class="block px-5 py-2 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">Home 2</a></li>
                     </ul>
                 </li>
-
-                <!-- Standard Links exactly as requested -->
-                <li><a href="about.html"
-                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">About</a>
-                </li>
-                <li><a href="service.html"
-                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Service</a>
-                </li>
-                <li><a href="offers.html"
-                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Offers</a>
-                </li>
-                <li><a href="booking.html"
-                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Booking</a>
-                </li>
-                <li><a href="faq.html"
-                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Faq</a>
-                </li>
-                <li><a href="contact.html"
-                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Contact</a>
-                </li>
-
-                <!-- Dashboard Dropdown -->
+                <li><a href="about.html" class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">About</a></li>
+                <li><a href="service.html" class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Service</a></li>
+                <li><a href="pricing.html" class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Pricing</a></li>
+                <li><a href="booking.html" class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Booking</a></li>
+                <li><a href="faq.html" class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Faq</a></li>
+                <li><a href="contact.html" class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Contact</a></li>
                 <li class="relative group">
-                    <a href="#"
-                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all flex items-center gap-1 dark:hover:bg-primary/20">
+                    <a href="#" class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all flex items-center gap-1 dark:hover:bg-primary/20">
                         Dashboard <i class="fas fa-caret-down text-sm"></i>
                     </a>
-                    <ul
-                        class="absolute top-full left-0 mt-2 w-52 bg-white dark:bg-darkCard shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <li><a href="user.html"
-                                class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors">User
-                                Dashboard</a></li>
-                        <li><a href="admin.html"
-                                class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors">Admin
-                                Dashboard</a></li>
+                    <ul class="absolute top-full left-0 mt-2 w-52 bg-white dark:bg-darkCard shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <li><a href="user.html" class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors">User Dashboard</a></li>
+                        <li><a href="admin.html" class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors">Admin Dashboard</a></li>
                     </ul>
                 </li>
-
-                <!-- Auth Buttons -->
-                <li class="ml-4"><a href="login.html"
-                        class="px-6 py-2 rounded-full font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all">Login</a>
-                </li>
-
-
-                <!-- Theme & RTL Controls -->
+                <li class="ml-4"><a href="login.html" class="px-6 py-2 rounded-full font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all">Login</a></li>
                 <li class="flex items-center gap-2 ml-2 border-l border-gray-200 dark:border-gray-700 pl-4">
-                    <button id="themeToggle"
-                        class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                        title="Toggle Theme">
+                    <button id="themeToggle" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" title="Toggle Theme">
                         <i class="fas fa-moon dark:hidden"></i>
                         <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
                     </button>
-                    <button id="rtlToggle"
-                        class="px-3 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm"
-                        title="Toggle RTL">
-                        RTL
-                    </button>
+                    <button id="rtlToggle" class="px-3 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm" title="Toggle RTL">RTL</button>
                 </li>
             </ul>
 
-            <!-- Hamburger Button (Mobile Only) -->
-            <button id="hamburger"
-                class="xl:hidden w-10 h-10 border-2 border-gray-200 dark:border-gray-700 rounded-lg flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary hover:border-primary transition-colors">
+            <!-- Hamburger Button -->
+            <button id="hamburger" class="xl:hidden w-10 h-10 border-2 border-gray-200 dark:border-gray-700 rounded-lg flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary hover:border-primary transition-colors">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </nav>
     </header>
 
-    <!-- ==================== MOBILE NAV MENU (HAMBURGER) ==================== -->
-    <div id="mobileNavMenu"
-        class="fixed top-0 -right-full w-[320px] h-screen bg-gray-50 dark:bg-darkCard z-[999] transition-all duration-400 border-l-[3px] border-primary pt-[90px] px-6 pb-8 overflow-y-auto mobile-menu-scroll rtl:border-l-0 rtl:border-r-[3px] rtl:-left-full rtl:right-auto shadow-2xl">
+    <!-- ==================== MOBILE NAV MENU ==================== -->
+    <div id="mobileNavMenu" class="fixed top-0 -right-full w-[320px] h-screen bg-gray-50 dark:bg-darkCard z-[999] transition-all duration-400 border-l-[3px] border-primary pt-[90px] px-6 pb-8 overflow-y-auto mobile-menu-scroll rtl:border-l-0 rtl:border-r-[3px] rtl:-left-full rtl:right-auto shadow-2xl">
         <ul class="flex flex-col gap-3 list-none p-0 m-0">
-            <li>
-                <div class="px-5 py-3 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
-                    Home</div>
-            </li>
-            <li><a href="index.html"
-                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Home
-                    1</a></li>
-            <li><a href="home2.html"
-                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Home
-                    2</a></li>
-
-            <li>
-                <div
-                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
-                    Pages</div>
-            </li>
-            <li><a href="about.html"
-                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">About</a>
-            </li>
-            <li><a href="service.html"
-                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Service</a>
-            </li>
-            <li><a href="offers.html"
-                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Offers</a>
-            </li>
-            <li><a href="booking.html"
-                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Booking</a>
-            </li>
-            <li><a href="faq.html"
-                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Faq</a>
-            </li>
-            <li><a href="contact.html"
-                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Contact</a>
-            </li>
-
-            <li>
-                <div
-                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
-                    Dashboard</div>
-            </li>
-            <li><a href="user.html"
-                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">User
-                    Dashboard</a></li>
-            <li><a href="admin.html"
-                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Admin
-                    Dashboard</a></li>
-
-            <li>
-                <div
-                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
-                    Account</div>
-            </li>
-            <li><a href="login.html"
-                    class="block px-5 py-3 text-center rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors">Login</a>
-            </li>
-
+            <li><div class="px-5 py-3 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">Home</div></li>
+            <li><a href="index.html" class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Home 1</a></li>
+            <li><a href="home2.html" class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Home 2</a></li>
+            <li><div class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">Pages</div></li>
+            <li><a href="about.html" class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">About</a></li>
+            <li><a href="service.html" class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Service</a></li>
+            <li><a href="pricing.html" class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Pricing</a></li>
+            <li><a href="booking.html" class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Booking</a></li>
+            <li><a href="faq.html" class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Faq</a></li>
+            <li><a href="contact.html" class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Contact</a></li>
+            <li><div class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">Dashboard</div></li>
+            <li><a href="user.html" class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">User Dashboard</a></li>
+            <li><a href="admin.html" class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Admin Dashboard</a></li>
+            <li><div class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">Account</div></li>
+            <li><a href="login.html" class="block px-5 py-3 text-center rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors">Login</a></li>
         </ul>
-
         <div class="mt-8 flex flex-col gap-4">
-            <button id="mobileThemeToggle"
-                class="w-full flex items-center justify-center gap-3 border-2 border-gray-200 dark:border-gray-700 rounded-full py-3 bg-white dark:bg-darkBg hover:bg-primary hover:text-white hover:border-primary transition-colors font-medium">
+            <button id="mobileThemeToggle" class="w-full flex items-center justify-center gap-3 border-2 border-gray-200 dark:border-gray-700 rounded-full py-3 bg-white dark:bg-darkBg hover:bg-primary hover:text-white hover:border-primary transition-colors font-medium">
                 <i class="fas fa-moon dark:hidden"></i>
                 <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
                 <span class="dark:hidden">Dark Mode</span>
                 <span class="hidden dark:block">Light Mode</span>
             </button>
-            <button id="mobileRtlToggle"
-                class="w-full flex items-center justify-center gap-3 border-2 border-gray-200 dark:border-gray-700 rounded-full py-3 bg-white dark:bg-darkBg hover:bg-primary hover:text-white hover:border-primary transition-colors font-medium">
+            <button id="mobileRtlToggle" class="w-full flex items-center justify-center gap-3 border-2 border-gray-200 dark:border-gray-700 rounded-full py-3 bg-white dark:bg-darkBg hover:bg-primary hover:text-white hover:border-primary transition-colors font-medium">
                 <span>RTL</span>
             </button>
         </div>
     </div>
 
-    <!-- ==================== HERO BANNER (SERVICE PAGE) ==================== -->
+    <!-- ==================== HERO BANNER ==================== -->
     <section class="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <!-- Background Image -->
-        <img src="images/homecleaning (5).jpg" alt="Cleaning Services"
-            class="absolute inset-0 w-full h-full object-cover z-0" style="object-position: center 30%;">
-
-        <!-- Dark Gradient Overlay -->
+        <img src="images/homecleaning (5).jpg" alt="Cleaning Services" onerror="this.src='https://placehold.co/1920x1080/0ea5e9/ffffff?text=Our+Services'" class="absolute inset-0 w-full h-full object-cover z-0" style="object-position: center 30%;">
         <div class="absolute inset-0 bg-gray-900/75 z-10"></div>
-
-        <div
-            class="relative z-20 w-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col items-center justify-center text-center">
-
-            <!-- Text Content -->
+        <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col items-center justify-center text-center">
             <div class="w-full max-w-3xl text-white mt-10">
                 <p class="text-primary font-semibold text-lg md:text-xl mb-3 tracking-wide uppercase">What We Do</p>
                 <h1 class="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
                     Our <span class="text-primary">Services</span>
                 </h1>
                 <p class="text-gray-300 text-lg md:text-xl mb-8">
-                    From standard maintenance to deep cleaning and move-in specials, we offer comprehensive solutions to
-                    keep your home spotless.
+                    From standard maintenance to deep cleaning and move-in specials, we offer detailed and comprehensive solutions to keep every corner of your home spotless.
                 </p>
             </div>
-
         </div>
     </section>
 
     <!-- ==================== MAIN CONTENT ==================== -->
     <main class="flex-grow">
 
-        <!-- SECTION 1: 12 UNIQUE SERVICE CARDS -->
+        <!-- SECTION 1: SERVICE OVERVIEW CARDS -->
         <section class="py-20 bg-gray-50 dark:bg-darkBg transition-colors duration-300">
             <div class="max-w-[1400px] mx-auto px-6 md:px-12">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Comprehensive
-                        Care</span>
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Cleaning
-                        Solutions For Every Need</h2>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg">Browse our wide array of professional cleaning
-                        and housekeeping services.</p>
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Comprehensive Care</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Cleaning Solutions For Every Need</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg">Browse our wide array of professional cleaning and housekeeping services designed to fit your unique lifestyle.</p>
                 </div>
 
                 <!-- Cards Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-
-                    <!-- Card 1 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
+                    
+                    <!-- Card 1: Standard Clean -->
+                    <div class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
                         <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (6).jpg" alt="Standard Clean"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
-                            </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Standard Clean</h3>
+                            <img src="images/homecleaning (6).jpg" alt="Regular Clean" onerror="this.src='https://placehold.co/600x400/0ea5e9/ffffff?text=Regular+Clean'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
+                            <h3 class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">Regular Cleaning</h3>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Ideal for regular upkeep.
-                                Includes surface dusting, sweeping, vacuuming, and basic bathroom/kitchen sanitization.
-                            </p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Ideal for regular upkeep. Includes surface dusting, sweeping, vacuuming, and basic sanitization for a consistently fresh home.</p>
+                            <a href="#detailed-services" class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Learn More</a>
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
+                    <!-- Card 2: Deep Clean -->
+                    <div class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
                         <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (7).jpg" alt="Deep Clean"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
-                            </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Deep Clean</h3>
+                            <img src="images/homecleaning (7).jpg" alt="Deep Clean" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Deep+Clean'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
+                            <h3 class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">Deep Cleaning</h3>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">A rigorous top-to-bottom
-                                scrub. Includes baseboards, blinds, and heavy grime removal in all living spaces.</p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">A rigorous top-to-bottom scrub. Includes baseboards, blinds, interior windows, and heavy grime removal in all living spaces.</p>
+                            <a href="#detailed-services" class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Learn More</a>
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
+                    <!-- Card 3: Kitchen & Bath (NEW REQUESTED CARD) -->
+                    <div class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
                         <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (8).jpg" alt="Move-In/Out Clean"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
-                            </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Move-In / Out</h3>
+                            <img src="images/homecleaning (8).jpg" alt="Kitchen and Bath" onerror="this.src='https://placehold.co/600x400/38bdf8/ffffff?text=Kitchen+%26+Bath'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
+                            <h3 class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">Kitchen & Bath</h3>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Ensure your old or new
-                                property is spotless. We clean inside empty cabinets, drawers, and major appliances.</p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Targeted sanitation for your home's most used areas. Intensive descaling, degreasing, and grout scrubbing.</p>
+                            <a href="#detailed-services" class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Learn More</a>
                         </div>
                     </div>
 
-                    <!-- Card 4 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
+                    <!-- Card 4: Move-In/Out -->
+                    <div class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
                         <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (9).jpg" alt="Carpet Cleaning"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
-                            </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Carpet Cleaning</h3>
+                            <img src="images/homecleaning (9).jpg" alt="Move-In/Out Clean" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=Move-In/Out'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
+                            <h3 class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">Move-In / Out</h3>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Professional steam
-                                cleaning to remove deep-set stains, pet odors, and allergens from your carpets and rugs.
-                            </p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Ensure your old or new property is spotless. We clean inside empty cabinets, drawers, and major appliances.</p>
+                            <a href="#detailed-services" class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Learn More</a>
                         </div>
                     </div>
 
-                    <!-- Card 5 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
+                    <!-- Card 5: Carpet Cleaning -->
+                    <div class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
                         <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (10).jpg" alt="Window Cleaning"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
-                            </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Window Cleaning</h3>
+                            <img src="images/homecleaning (10).jpg" alt="Carpet Cleaning" onerror="this.src='https://placehold.co/600x400/94a3b8/ffffff?text=Carpet+Cleaning'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
+                            <h3 class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">Carpet Cleaning</h3>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Streak-free interior and
-                                exterior window washing to let the natural light shine brilliantly into your home.</p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Professional steam cleaning to remove deep-set stains, pet odors, and allergens from your carpets and rugs.</p>
+                            <a href="#detailed-services" class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Learn More</a>
                         </div>
                     </div>
 
-                    <!-- Card 6 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
+                    <!-- Card 6: Window Cleaning -->
+                    <div class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
                         <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (11).jpg" alt="Appliance Detail"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
-                            </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Appliance Detail</h3>
+                            <img src="images/homecleaning (11).jpg" alt="Window Cleaning" onerror="this.src='https://placehold.co/600x400/64748b/ffffff?text=Window+Cleaning'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
+                            <h3 class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">Window Cleaning</h3>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Specialized cleaning for
-                                the interior and exterior of ovens, refrigerators, and microwaves.</p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Streak-free interior and exterior window washing to let the natural light shine brilliantly into your home.</p>
+                            <a href="#detailed-services" class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Learn More</a>
                         </div>
                     </div>
 
-                    <!-- Card 7 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
+                    <!-- Card 7: Post-Construction -->
+                    <div class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
                         <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (12).jpg" alt="Post-Construction"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
-                            </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Post-Construction</h3>
+                            <img src="images/homecleaning (12).jpg" alt="Post-Construction" onerror="this.src='https://placehold.co/600x400/475569/ffffff?text=Post-Construction'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
+                            <h3 class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">Post-Construction</h3>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Remove all dust, debris,
-                                and leftover materials after a home renovation or new build project.</p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Remove all dust, debris, and leftover materials after a home renovation or new build project safely.</p>
+                            <a href="#detailed-services" class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Learn More</a>
                         </div>
                     </div>
 
-                    <!-- Card 8 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
+                    <!-- Card 8: Airbnb Turnover -->
+                    <div class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
                         <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (13).jpg" alt="Office Cleaning"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
-                            </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Office Cleaning</h3>
+                            <img src="images/homecleaning (13).jpg" alt="Airbnb Turnover" onerror="this.src='https://placehold.co/600x400/334155/ffffff?text=Airbnb+Turnover'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
+                            <h3 class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">Airbnb Turnover</h3>
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Maintain a healthy,
-                                productive workspace with our after-hours commercial and small office cleaning.</p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Fast, reliable changeover cleaning for vacation rentals, ensuring five-star reviews from every guest.</p>
+                            <a href="#detailed-services" class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Learn More</a>
                         </div>
                     </div>
 
-                    <!-- Card 9 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (14).jpg" alt="Upholstery Clean"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DETAILED SERVICE BREAKDOWN (NEWLY ADDED) -->
+        <section id="detailed-services" class="py-24 bg-white dark:bg-darkCard border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+                
+                <div class="text-center max-w-4xl mx-auto mb-20">
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Our Expertise</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">A Closer Look At Our Core Services</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                        We don't just skim the surface. Below is a detailed breakdown of what is included in our top-tier housekeeping packages, ensuring you know exactly what to expect from the CleanHome team.
+                    </p>
+                </div>
+
+                <div class="space-y-24">
+                    
+                    <!-- Detail 1: Regular Cleaning -->
+                    <div class="flex flex-col lg:flex-row gap-12 items-center">
+                        <div class="w-full lg:w-1/2">
+                            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                                <img src="images/detail-regular.jpg" onerror="this.src='https://placehold.co/800x600/0ea5e9/ffffff?text=Regular+Housekeeping'" alt="Regular Housekeeping" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
+                                <div class="absolute top-6 left-6 bg-white dark:bg-darkCard px-4 py-2 rounded-full font-bold text-primary shadow-lg text-sm">Most Popular</div>
                             </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Upholstery Clean</h3>
                         </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Revitalize your sofas,
-                                armchairs, and mattresses with our gentle but effective fabric cleaning techniques.</p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                        <div class="w-full lg:w-1/2">
+                            <h3 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Regular Housekeeping & Maintenance</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-lg">Designed for busy professionals and families, our regular cleaning service keeps your home in pristine condition week after week. We focus on high-traffic areas and essential upkeep.</p>
+                            
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Living Areas:</strong> Dusting all surfaces, vacuuming carpets, mopping hard floors, emptying trash, and tidying up loose items.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Bedrooms:</strong> Making beds, dusting furniture, wiping mirrors, and thorough floor care.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>General:</strong> Wiping down door handles, light switches, and basic sanitization to reduce household allergens.</span>
+                                </li>
+                            </ul>
+                            <a href="booking.html" class="inline-flex items-center gap-2 font-bold text-primary hover:text-secondary transition-colors text-lg">Book Regular Service <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- Card 10 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (15).jpg" alt="Eco-Friendly Clean"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
+                    <!-- Detail 2: Deep Cleaning (Reversed Layout) -->
+                    <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+                        <div class="w-full lg:w-1/2">
+                            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                                <img src="images/detail-deep.jpg" onerror="this.src='https://placehold.co/800x600/0284c7/ffffff?text=Deep+Cleaning'" alt="Deep Cleaning" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
+                                <div class="absolute top-6 right-6 bg-white dark:bg-darkCard px-4 py-2 rounded-full font-bold text-primary shadow-lg text-sm">Recommended Bi-Annually</div>
                             </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Eco-Friendly</h3>
                         </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">A specialized cleaning
-                                service utilizing 100% organic, non-toxic, and biodegradable cleaning solutions.</p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                        <div class="w-full lg:w-1/2">
+                            <h3 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Comprehensive Deep Cleaning</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-lg">When standard cleaning isn't enough, our deep clean targets the forgotten, hard-to-reach areas. Perfect for spring cleaning or preparing for major events.</p>
+                            
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Detailed Dusting:</strong> Ceiling fans, air vents, door frames, baseboards, and intricate light fixtures.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Heavy Scrubbing:</strong> Spot-cleaning walls, removing scuff marks, and intensive interior window washing.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Hidden Spaces:</strong> Moving light furniture to clean underneath, and vacuuming upholstery deeply.</span>
+                                </li>
+                            </ul>
+                            <a href="booking.html" class="inline-flex items-center gap-2 font-bold text-primary hover:text-secondary transition-colors text-lg">Book Deep Clean <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- Card 11 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="images/homecleaning (16).jpg" alt="Spring Cleaning"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
+                    <!-- Detail 3: Kitchen & Bath (NEW SECTION) -->
+                    <div class="flex flex-col lg:flex-row gap-12 items-center">
+                        <div class="w-full lg:w-1/2">
+                            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                                <img src="images/detail-kitchen.jpg" onerror="this.src='https://placehold.co/800x600/38bdf8/ffffff?text=Kitchen+%26+Bath+Detail'" alt="Kitchen and Bath" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
+                                <div class="absolute top-6 left-6 bg-white dark:bg-darkCard px-4 py-2 rounded-full font-bold text-primary shadow-lg text-sm">Intensive Sanitization</div>
                             </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Spring Cleaning</h3>
                         </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">A seasonal refresh that
-                                targets forgotten areas like ceiling fans, high shelves, and hidden corners.</p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                        <div class="w-full lg:w-1/2">
+                            <h3 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Dedicated Kitchen & Bath Detail</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-lg">Kitchens and bathrooms harbor the most bacteria and tough stains. We deploy specialized, non-toxic products to cut through grease, soap scum, and hard water stains.</p>
+                            
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Kitchen Degreasing:</strong> Scrubbing stovetops, range hoods, backsplashes, and the exterior (and optional interior) of appliances.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Bathroom Descaling:</strong> Removing mineral deposits from showerheads and faucets. Intensive grout scrubbing and sanitizing tubs and showers.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Disinfection:</strong> Complete wipe-down of countertops, sinks, and toilets to guarantee a hygienic, germ-free environment.</span>
+                                </li>
+                            </ul>
+                            <a href="booking.html" class="inline-flex items-center gap-2 font-bold text-primary hover:text-secondary transition-colors text-lg">Book Kitchen & Bath Detail <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <!-- Card 12 -->
-                    <div
-                        class="flex flex-col bg-white dark:bg-darkCard rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:-translate-y-2 transition-transform duration-300 h-full group">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="images/about3.jpg" alt="Airbnb Turnover"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent">
+                    <!-- Detail 4: Move-In / Move-Out (Reversed Layout) -->
+                    <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+                        <div class="w-full lg:w-1/2">
+                            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                                <img src="images/detail-move.jpg" onerror="this.src='https://placehold.co/800x600/0f172a/ffffff?text=Move-In+Move-Out'" alt="Move-In Move-Out Cleaning" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
+                                <div class="absolute top-6 right-6 bg-white dark:bg-darkCard px-4 py-2 rounded-full font-bold text-primary shadow-lg text-sm">Stress-Free Moving</div>
                             </div>
-                            <h3
-                                class="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white z-10 leading-tight">
-                                Airbnb Turnover</h3>
                         </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm flex-grow">Fast, reliable changeover
-                                cleaning for vacation rentals, ensuring five-star reviews from every guest.</p>
-                            <a href="services-details.html"
-                                class="inline-block text-center w-full py-3 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 hover:bg-primary hover:text-white transition-colors font-semibold mt-auto">Enquire
-                                Now</a>
+                        <div class="w-full lg:w-1/2">
+                            <h3 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Move-In & Move-Out Cleaning</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6 text-lg">Moving is stressful enough without having to worry about cleaning. Whether ensuring you get your deposit back or preparing a fresh canvas for your new chapter, we handle it all.</p>
+                            
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Cabinet & Drawer Interiors:</strong> Wiping out all empty shelving units, closets, and built-in storage.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Appliance Interiors:</strong> Deep cleaning inside the oven, refrigerator, and microwave to remove all food residues.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check text-xs"></i></div>
+                                    <span class="text-gray-700 dark:text-gray-300"><strong>Complete Overhaul:</strong> Includes all Deep Clean checklist items, ensuring the property looks as good as new.</span>
+                                </li>
+                            </ul>
+                            <a href="booking.html" class="inline-flex items-center gap-2 font-bold text-primary hover:text-secondary transition-colors text-lg">Book Move-In/Out Clean <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -549,99 +420,72 @@
         </section>
 
         <!-- EXTRA SECTION 1: THE CLEANHOME GUARANTEE -->
-        <section
-            class="py-20 bg-white dark:bg-darkCard border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
+        <section class="py-20 bg-gray-50 dark:bg-darkBg transition-colors duration-300">
             <div class="max-w-[1400px] mx-auto px-6 md:px-12">
-                <div
-                    class="bg-gray-50 dark:bg-darkBg rounded-[3rem] p-10 md:p-16 flex flex-col lg:flex-row gap-12 items-center border border-gray-200 dark:border-gray-700">
+                <div class="bg-white dark:bg-darkCard rounded-[3rem] p-10 md:p-16 flex flex-col lg:flex-row gap-12 items-center border border-gray-200 dark:border-gray-700 shadow-xl">
                     <div class="w-full lg:w-1/2">
-                        <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Our
-                            Promise</span>
-                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">The
-                            CleanHome Guarantee</h2>
+                        <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Our Promise</span>
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">The CleanHome Guarantee</h2>
                         <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
-                            We don't just clean homes; we care for them. Every service we provide is backed by our
-                            unwavering commitment to quality and your absolute satisfaction.
+                            We don't just clean homes; we care for them. Every service we provide is backed by our unwavering commitment to quality and your absolute satisfaction.
                         </p>
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                                    <i class="fas fa-check"></i></div>
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-check"></i></div>
                                 <div>
                                     <h4 class="font-bold text-gray-900 dark:text-white text-lg">100% Satisfaction</h4>
-                                    <p class="text-gray-600 dark:text-gray-400 text-sm">If you aren't happy, we'll
-                                        re-clean for free within 24 hours.</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">If you aren't happy with any aspect of our service, we'll re-clean for free within 24 hours.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                                    <i class="fas fa-shield-alt"></i></div>
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-shield-alt"></i></div>
                                 <div>
-                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Fully Insured</h4>
-                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Your property is protected
-                                        against any accidental damages.</p>
+                                    <h4 class="font-bold text-gray-900 dark:text-white text-lg">Fully Insured & Vetted</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Your property is protected, and our staff undergo rigorous background checks.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="w-full lg:w-1/2 flex justify-center">
-                        <img src="images/about4.jpg" alt="Guarantee"
-                            class="rounded-[2rem] w-full max-w-md h-auto shadow-2xl rotate-2">
+                        <img src="images/about4.jpg" onerror="this.src='https://placehold.co/600x800/1e293b/ffffff?text=Our+Guarantee'" alt="Guarantee" class="rounded-[2rem] w-full max-w-md h-auto shadow-2xl rotate-2">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- EXTRA SECTION 2: OUR 4-STEP PROCESS -->
-        <section class="py-20 bg-gray-50 dark:bg-darkBg transition-colors duration-300">
+        <section class="py-20 bg-white dark:bg-darkCard transition-colors duration-300">
             <div class="max-w-[1400px] mx-auto px-6 md:px-12 text-center">
                 <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">How It Works</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-16">Our 4-Step
-                    Process</h2>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-16">Our 4-Step Process</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
                     <!-- Connecting Line -->
-                    <div
-                        class="hidden md:block absolute top-12 left-[12%] right-[12%] h-1 bg-gray-200 dark:bg-gray-700 z-0">
-                    </div>
+                    <div class="hidden md:block absolute top-12 left-[12%] right-[12%] h-1 bg-gray-100 dark:bg-gray-800 z-0"></div>
 
                     <!-- Step 1 -->
                     <div class="relative z-10 flex flex-col items-center">
-                        <div
-                            class="w-24 h-24 bg-white dark:bg-darkCard rounded-full flex items-center justify-center shadow-lg border-4 border-primary text-3xl text-primary mb-6">
-                            <i class="fas fa-calendar-alt"></i></div>
+                        <div class="w-24 h-24 bg-gray-50 dark:bg-darkBg rounded-full flex items-center justify-center shadow-lg border-4 border-primary text-3xl text-primary mb-6"><i class="fas fa-calendar-alt"></i></div>
                         <h4 class="font-bold text-gray-900 dark:text-white text-xl mb-2">1. Schedule</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">Book online or call us to set a
-                            date and time that fits your life.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">Book online or call us to set a date and time that fits your life perfectly.</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="relative z-10 flex flex-col items-center">
-                        <div
-                            class="w-24 h-24 bg-white dark:bg-darkCard rounded-full flex items-center justify-center shadow-lg border-4 border-primary text-3xl text-primary mb-6">
-                            <i class="fas fa-door-open"></i></div>
+                        <div class="w-24 h-24 bg-gray-50 dark:bg-darkBg rounded-full flex items-center justify-center shadow-lg border-4 border-primary text-3xl text-primary mb-6"><i class="fas fa-door-open"></i></div>
                         <h4 class="font-bold text-gray-900 dark:text-white text-xl mb-2">2. We Arrive</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">Our vetted, fully-equipped team
-                            arrives punctually at your door.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">Our vetted, fully-equipped team arrives punctually at your front door.</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="relative z-10 flex flex-col items-center">
-                        <div
-                            class="w-24 h-24 bg-white dark:bg-darkCard rounded-full flex items-center justify-center shadow-lg border-4 border-primary text-3xl text-primary mb-6">
-                            <i class="fas fa-magic"></i></div>
+                        <div class="w-24 h-24 bg-gray-50 dark:bg-darkBg rounded-full flex items-center justify-center shadow-lg border-4 border-primary text-3xl text-primary mb-6"><i class="fas fa-magic"></i></div>
                         <h4 class="font-bold text-gray-900 dark:text-white text-xl mb-2">3. We Clean</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">We execute our detailed checklist,
-                            leaving no corner untouched.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">We execute our detailed checklist, leaving no corner untouched or overlooked.</p>
                     </div>
                     <!-- Step 4 -->
                     <div class="relative z-10 flex flex-col items-center">
-                        <div
-                            class="w-24 h-24 bg-white dark:bg-darkCard rounded-full flex items-center justify-center shadow-lg border-4 border-primary text-3xl text-primary mb-6">
-                            <i class="fas fa-couch"></i></div>
+                        <div class="w-24 h-24 bg-gray-50 dark:bg-darkBg rounded-full flex items-center justify-center shadow-lg border-4 border-primary text-3xl text-primary mb-6"><i class="fas fa-couch"></i></div>
                         <h4 class="font-bold text-gray-900 dark:text-white text-xl mb-2">4. You Relax</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">Enjoy your beautifully fresh home
-                            and newly reclaimed free time.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">Enjoy your beautifully fresh home and newly reclaimed free time.</p>
                     </div>
                 </div>
             </div>
@@ -650,25 +494,19 @@
         <!-- EXTRA SECTION 3: QUICK CALL TO ACTION -->
         <section class="py-24 bg-primary transition-colors duration-300 relative overflow-hidden">
             <!-- Background shapes -->
-            <div
-                class="absolute top-0 left-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2">
-            </div>
-            <div
-                class="absolute bottom-0 right-0 w-80 h-80 bg-secondary opacity-50 rounded-full blur-3xl translate-x-1/3 translate-y-1/3">
-            </div>
+            <div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-secondary opacity-50 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
 
             <div class="max-w-[1000px] mx-auto px-6 text-center relative z-10">
                 <h2 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6">Ready for a Spotless Home?</h2>
                 <p class="text-blue-100 text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
-                    Let us take the chores off your hands so you can focus on the things that truly matter.
+                    Let us take the chores off your hands so you can focus on the things that truly matter. Select your service today.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="booking.html"
-                        class="px-10 py-5 bg-white text-primary hover:bg-gray-50 rounded-full font-bold text-lg shadow-xl transition-transform hover:-translate-y-1 w-full sm:w-auto">
+                    <a href="booking.html" class="px-10 py-5 bg-white text-primary hover:bg-gray-50 rounded-full font-bold text-lg shadow-xl transition-transform hover:-translate-y-1 w-full sm:w-auto">
                         Book Your Clean Now
                     </a>
-                    <a href="contact.html"
-                        class="px-10 py-5 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary rounded-full font-bold text-lg transition-colors w-full sm:w-auto">
+                    <a href="contact.html" class="px-10 py-5 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary rounded-full font-bold text-lg transition-colors w-full sm:w-auto">
                         Request a Quote
                     </a>
                 </div>
@@ -678,87 +516,56 @@
     </main>
 
     <!-- ==================== FOOTER ==================== -->
-    <footer
-        class="bg-white dark:bg-darkCard border-t border-gray-100 dark:border-gray-800 pt-16 pb-8 mt-auto transition-colors duration-300">
+    <footer class="bg-gray-50 dark:bg-darkBg border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 mt-auto transition-colors duration-300">
         <div class="max-w-[1400px] mx-auto px-6 md:px-12">
-
             <!-- Top Footer Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Brand Column -->
                 <div>
                     <a href="index.html" class="flex items-center gap-2 mb-6">
-                        <i
-                            class="fas fa-broom text-3xl text-primary bg-clip-text bg-gradient-to-br from-primary to-secondary"></i>
-                        <span
-                            class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">CleanHome</span>
+                        <i class="fas fa-broom text-3xl text-primary bg-clip-text bg-gradient-to-br from-primary to-secondary"></i>
+                        <span class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">CleanHome</span>
                     </a>
                     <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                        Transforming homes into spotless sanctuaries. Reliable, professional, and thorough cleaning
-                        services for your everyday life.
+                        Transforming homes into spotless sanctuaries. Reliable, professional, and thorough cleaning services for your everyday life.
                     </p>
                 </div>
 
                 <!-- Quick Links -->
                 <div>
-                    <h3
-                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
-                        QuickLinks</h3>
+                    <h3 class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">QuickLinks</h3>
                     <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
-                        <li><a href="index.html"
-                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Home</a>
-                        </li>
-                        <li><a href="about.html"
-                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">About</a>
-                        </li>
-                        <li><a href="service.html"
-                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Service</a>
-                        </li>
-                        <li><a href="contact.html"
-                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Contact</a>
-                        </li>
+                        <li><a href="index.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">About</a></li>
+                        <li><a href="service.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Service</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Contact</a></li>
                     </ul>
                 </div>
 
                 <!-- Services -->
                 <div>
-                    <h3
-                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
-                        Services</h3>
+                    <h3 class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">Services</h3>
                     <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
-                        <li><a href="service.html"
-                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Standard
-                                Cleaning</a></li>
-                        <li><a href="service.html"
-                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Deep
-                                Housekeeping</a></li>
-                        <li><a href="service.html"
-                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Move-In
-                                / Move-Out</a></li>
+                        <li><a href="#detailed-services" class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Standard Cleaning</a></li>
+                        <li><a href="#detailed-services" class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Deep Housekeeping</a></li>
+                        <li><a href="#detailed-services" class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Kitchen & Bath</a></li>
+                        <li><a href="#detailed-services" class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Move-In / Move-Out</a></li>
                     </ul>
                 </div>
 
                 <!-- Social & Contact -->
                 <div>
-                    <h3
-                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
-                        Connect</h3>
+                    <h3 class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">Connect</h3>
                     <ul class="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
-                        <li><a href="#"
-                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
-                                    class="fab fa-facebook-f w-5 text-center"></i> Facebook</a></li>
-                        <li><a href="#"
-                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
-                                    class="fab fa-instagram w-5 text-center"></i> Instagram</a></li>
-                        <li><a href="#"
-                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
-                                    class="fab fa-x-twitter w-5 text-center"></i> X</a></li>
+                        <li><a href="#" class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i class="fab fa-facebook-f w-5 text-center"></i> Facebook</a></li>
+                        <li><a href="#" class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i class="fab fa-instagram w-5 text-center"></i> Instagram</a></li>
+                        <li><a href="#" class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i class="fab fa-x-twitter w-5 text-center"></i> X</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Middle & Bottom Footer -->
-            <div
-                class="border-y border-gray-200 dark:border-gray-800 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="border-y border-gray-200 dark:border-gray-800 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
                 <h3 class="text-primary font-bold text-xl font-serif">CleanHome Service</h3>
                 <div class="flex gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
                     <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
@@ -783,7 +590,6 @@
             function toggleMenu() {
                 const isRtl = document.documentElement.dir === 'rtl';
 
-                // Handle menu sliding (LTR vs RTL)
                 if (isRtl) {
                     mobileMenu.classList.toggle('rtl:-left-full');
                     mobileMenu.classList.toggle('rtl:left-0');
@@ -792,11 +598,9 @@
                     mobileMenu.classList.toggle('right-0');
                 }
 
-                // Handle overlay & icon
                 overlay.classList.toggle('hidden');
-                document.body.classList.toggle('overflow-hidden'); // Prevent background scrolling
+                document.body.classList.toggle('overflow-hidden');
 
-                // Switch hamburger icon to close (X)
                 const icon = hamburger.querySelector('i');
                 if (icon.classList.contains('fa-bars')) {
                     icon.classList.replace('fa-bars', 'fa-times');
@@ -821,7 +625,6 @@
             themeToggle.addEventListener('click', toggleTheme);
             mobileThemeToggle.addEventListener('click', toggleTheme);
 
-            // Check local storage for theme
             if (localStorage.getItem('theme') === 'dark') {
                 document.documentElement.classList.add('dark');
             }
@@ -839,7 +642,6 @@
             rtlToggle.addEventListener('click', toggleRTL);
             mobileRtlToggle.addEventListener('click', toggleRTL);
 
-            // Check local storage for direction
             if (localStorage.getItem('direction') === 'rtl') {
                 document.documentElement.dir = 'rtl';
             }
@@ -849,21 +651,28 @@
             const navLinks = document.querySelectorAll('nav a, #mobileNavMenu a');
             navLinks.forEach(link => {
                 const href = link.getAttribute('href');
-                if (href === currentPath) {
-                    // Desktop main nav link style
+                if (href === currentPath || (currentPath === '' && href === 'index.html')) {
                     if (link.classList.contains('px-4') && link.classList.contains('py-2')) {
                         link.classList.add('text-primary', 'bg-primary/10', 'dark:bg-primary/20');
                     }
-                    // Desktop dropdown link style
                     else if (link.classList.contains('px-5') && link.classList.contains('py-2') && !link.classList.contains('border-2')) {
                         link.classList.add('bg-primary', 'text-white');
                     }
-                    // Mobile nav link style
                     else if (link.classList.contains('px-5') && link.classList.contains('py-3') && link.classList.contains('border-2')) {
                         link.classList.remove('bg-white', 'dark:bg-darkBg', 'border-gray-200', 'dark:border-gray-700');
                         link.classList.add('bg-primary', 'text-white', 'border-primary');
                     }
                 }
+            });
+            
+            // 5. Smooth Scroll for Anchor Links (Added for "Learn More" buttons)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
             });
         });
     </script>

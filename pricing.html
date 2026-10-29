@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Packages - CleanHome Professional Cleaning</title>
+    <meta name="description"
+        content="Transparent flat-rate cleaning packages and pricing for standard, deep, and move-in/out house cleaning services. Interactive cost estimator and 100% satisfaction guaranteed.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧹</text></svg>">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS Configuration with Consistent Brand Color Palette -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Trustworthy Sky Blue
+                        secondary: '#0284c7', // Ocean Blue
+                        accent: '#38bdf8', // Light Sky Cyan
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for mobile menu */
+        .mobile-menu-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .mobile-menu-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        /* Glassmorphism styling */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        /* Micro-animations */
+        @keyframes subtlePulse {
+            0%, 100% {
+                box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.35);
+            }
+            50% {
+                box-shadow: 0 15px 35px -5px rgba(14, 165, 233, 0.55);
+            }
+        }
+
+        .pulse-primary-cta {
+            animation: subtlePulse 3s infinite ease-in-out;
+        }
+
+        /* Smooth tab & option transitions */
+        .option-pill {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .option-pill.active {
+            background-color: #0ea5e9;
+            color: #ffffff;
+            border-color: #0ea5e9;
+        }
+
+        /* Pricing FAQ Accordion styling */
+        .pricing-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+
+<body
+    class="font-sans text-gray-800 bg-gray-50 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300 flex flex-col min-h-screen">
+
+    <!-- Mobile Overlay -->
+    <div id="mobileOverlay" class="fixed inset-0 bg-black/50 z-[998] hidden transition-opacity"></div>
+
+    <!-- ==================== HEADER & NAVBAR ==================== -->
+    <header class="sticky top-0 z-[1000] bg-white dark:bg-darkCard shadow-md transition-colors duration-300">
+        <nav class="max-w-[1400px] mx-auto flex justify-between items-center px-6 py-4 min-h-[80px]">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 text-decoration-none group">
+                <i
+                    class="fas fa-broom text-3xl text-primary bg-clip-text bg-gradient-to-br from-primary to-secondary transition-transform group-hover:rotate-12 duration-300"></i>
+                <span
+                    class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">CleanHome</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden xl:flex items-center gap-2 m-0 p-0 list-none">
+
+                <!-- Home Dropdown -->
+                <li class="relative group">
+                    <a href="#"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all flex items-center gap-1 dark:hover:bg-primary/20">
+                        Home <i class="fas fa-caret-down text-sm"></i>
+                    </a>
+                    <ul
+                        class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-darkCard shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <li><a href="index.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">Home
+                                1</a></li>
+                        <li><a href="home2.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">Home
+                                2</a></li>
+                    </ul>
+                </li>
+
+                <!-- Standard Links -->
+                <li><a href="about.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">About</a>
+                </li>
+                <li><a href="service.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Service</a>
+                </li>
+                <li><a href="pricing.html"
+                        class="px-4 py-2 font-medium rounded-full text-primary bg-primary/10 dark:bg-primary/20 transition-all font-semibold">Pricing</a>
+                </li>
+                <li><a href="booking.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Booking</a>
+                </li>
+                <li><a href="faq.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Faq</a>
+                </li>
+                <li><a href="contact.html"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all dark:hover:bg-primary/20">Contact</a>
+                </li>
+
+                <!-- Dashboard Dropdown -->
+                <li class="relative group">
+                    <a href="#"
+                        class="px-4 py-2 font-medium rounded-full hover:bg-primary/10 hover:text-primary transition-all flex items-center gap-1 dark:hover:bg-primary/20">
+                        Dashboard <i class="fas fa-caret-down text-sm"></i>
+                    </a>
+                    <ul
+                        class="absolute top-full left-0 mt-2 w-52 bg-white dark:bg-darkCard shadow-xl border border-gray-100 dark:border-gray-700 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <li><a href="user.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors">User
+                                Dashboard</a></li>
+                        <li><a href="admin.html"
+                                class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors">Admin
+                                Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <!-- Auth Buttons -->
+                <li class="ml-4"><a href="login.html"
+                        class="px-6 py-2 rounded-full font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all">Login</a>
+                </li>
+
+                <!-- Theme & RTL Controls -->
+                <li class="flex items-center gap-2 ml-2 border-l border-gray-200 dark:border-gray-700 pl-4">
+                    <button id="themeToggle"
+                        class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        title="Toggle Theme" aria-label="Toggle Theme">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <button id="rtlToggle"
+                        class="px-3 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-bold text-sm"
+                        title="Toggle RTL" aria-label="Toggle RTL">
+                        RTL
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Hamburger Button (Mobile Only) -->
+            <button id="hamburger"
+                class="xl:hidden w-10 h-10 border-2 border-gray-200 dark:border-gray-700 rounded-lg flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary hover:border-primary transition-colors"
+                aria-label="Open Navigation Menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ==================== MOBILE NAV MENU (HAMBURGER) ==================== -->
+    <div id="mobileNavMenu"
+        class="fixed top-0 -right-full w-[320px] h-screen bg-gray-50 dark:bg-darkCard z-[999] transition-all duration-400 border-l-[3px] border-primary pt-[90px] px-6 pb-8 overflow-y-auto mobile-menu-scroll rtl:border-l-0 rtl:border-r-[3px] rtl:-left-full rtl:right-auto shadow-2xl">
+        <div class="mb-4">
+            <a href="booking.html"
+                class="block w-full py-3 text-center rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold shadow-md hover:opacity-95 transition-opacity">
+                Book a Cleaning
+            </a>
+        </div>
+        <ul class="flex flex-col gap-3 list-none p-0 m-0">
+            <li>
+                <div class="px-5 py-3 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Home</div>
+            </li>
+            <li><a href="index.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Home
+                    1</a></li>
+            <li><a href="home2.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Home
+                    2</a></li>
+
+            <li>
+                <div
+                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Pages</div>
+            </li>
+            <li><a href="about.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">About</a>
+            </li>
+            <li><a href="service.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Service</a>
+            </li>
+            <li><a href="pricing.html"
+                    class="block px-5 py-3 rounded-full border-2 border-primary bg-primary text-white font-semibold">Pricing</a>
+            </li>
+            <li><a href="booking.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Booking</a>
+            </li>
+            <li><a href="faq.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Faq</a>
+            </li>
+            <li><a href="contact.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Contact</a>
+            </li>
+
+            <li>
+                <div
+                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Dashboard</div>
+            </li>
+            <li><a href="user.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">User
+                    Dashboard</a></li>
+            <li><a href="admin.html"
+                    class="block px-5 py-3 rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-darkBg font-semibold hover:bg-primary hover:text-white hover:border-primary transition-colors">Admin
+                    Dashboard</a></li>
+
+            <li>
+                <div
+                    class="px-5 py-3 mt-2 font-semibold text-gray-500 dark:text-gray-400 uppercase text-xs tracking-wider">
+                    Account</div>
+            </li>
+            <li><a href="login.html"
+                    class="block px-5 py-3 text-center rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors">Login</a>
+            </li>
+        </ul>
+
+        <div class="mt-8 flex flex-col gap-4">
+            <button id="mobileThemeToggle"
+                class="w-full flex items-center justify-center gap-3 border-2 border-gray-200 dark:border-gray-700 rounded-full py-3 bg-white dark:bg-darkBg hover:bg-primary hover:text-white hover:border-primary transition-colors font-medium">
+                <i class="fas fa-moon dark:hidden"></i>
+                <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                <span class="dark:hidden">Dark Mode</span>
+                <span class="hidden dark:block">Light Mode</span>
+            </button>
+            <button id="mobileRtlToggle"
+                class="w-full flex items-center justify-center gap-3 border-2 border-gray-200 dark:border-gray-700 rounded-full py-3 bg-white dark:bg-darkBg hover:bg-primary hover:text-white hover:border-primary transition-colors font-medium">
+                <span>RTL</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow">
+
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="relative min-h-[50vh] flex items-center overflow-hidden bg-slate-900 border-b border-primary/20">
+            <!-- Background Image with Overlay -->
+            <img src="images/homecleaning (1).jpg" alt="Home Cleaning Rates and Pricing"
+                class="absolute inset-0 w-full h-full object-cover object-center opacity-25 z-0"
+                style="object-position: center 40%;">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-transparent z-10"></div>
+
+            <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 md:px-12 py-16 text-center text-white mt-4">
+                <!-- Trust Badge -->
+                <div
+                    class="inline-flex items-center gap-2 bg-primary/20 text-accent font-semibold px-4 py-1.5 rounded-full text-xs md:text-sm mb-4 tracking-wider uppercase border border-primary/30">
+                    <i class="fas fa-shield-halved text-primary"></i> 100% Transparent Flat-Rate Pricing
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    Transparent Rates & <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Cleaning Packages</span>
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-8">
+                    No hidden fees, surprise add-ons, or lock-in contracts. Choose the cleaning plan that fits your
+                    home and schedule your visit in seconds.
+                </p>
+
+                <!-- Quick Action Hero CTAs -->
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="booking.html"
+                        class="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold text-base shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-105 transition-all">
+                        <i class="fas fa-calendar-check mr-2"></i> Book Online Now
+                    </a>
+                    <a href="#calculatorSection"
+                        class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-base border border-white/20 transition-all backdrop-blur-sm">
+                        <i class="fas fa-calculator mr-2"></i> Instant Budget Estimator
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TRUST & VALUE GUARANTEES BAR ==================== -->
+        <section class="bg-white dark:bg-darkCard py-8 border-b border-gray-100 dark:border-gray-800 shadow-sm transition-colors duration-300">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center md:text-left">
+                    <!-- Guarantee 1 -->
+                    <div class="flex flex-col sm:flex-row items-center gap-3.5">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-badge-check"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-sm font-bold text-gray-900 dark:text-white">100% Satisfaction</h2>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Free re-clean within 24h</p>
+                        </div>
+                    </div>
+
+                    <!-- Guarantee 2 -->
+                    <div class="flex flex-col sm:flex-row items-center gap-3.5">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-sm font-bold text-gray-900 dark:text-white">Bonded & Insured</h2>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Background-checked staff</p>
+                        </div>
+                    </div>
+
+                    <!-- Guarantee 3 -->
+                    <div class="flex flex-col sm:flex-row items-center gap-3.5">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-sm font-bold text-gray-900 dark:text-white">Eco & Pet-Safe</h2>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Non-toxic cleaning products</p>
+                        </div>
+                    </div>
+
+                    <!-- Guarantee 4 -->
+                    <div class="flex flex-col sm:flex-row items-center gap-3.5">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-clock-rotate-left"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-sm font-bold text-gray-900 dark:text-white">Easy Cancellation</h2>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">No penalties up to 24h prior</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CORE CLEANING PACKAGES GRID ==================== -->
+        <section class="py-20 lg:py-24 bg-gray-50 dark:bg-darkBg transition-colors duration-300">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Curated Plans</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        Choose Your Cleaning Package
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg">
+                        Select a package below tailored to your living space. Each visit includes our comprehensive 50-point checklist.
+                    </p>
+                </div>
+
+                <!-- 3-Tier Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+
+                    <!-- Tier 1: Standard Clean -->
+                    <div
+                        class="glass-card rounded-[2rem] p-8 md:p-10 shadow-lg border border-gray-200 dark:border-gray-800 flex flex-col hover:-translate-y-2 transition-all duration-300">
+                        <div class="mb-6">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-5">
+                                <i class="fas fa-broom"></i>
+                            </div>
+                            <span class="inline-block bg-primary/10 text-primary font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider mb-3">
+                                Regular Care
+                            </span>
+                            <h3 class="font-serif text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                                Standard Clean
+                            </h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                Perfect for weekly, bi-weekly, or monthly upkeep to keep your home continuously fresh.
+                            </p>
+                        </div>
+
+                        <!-- Price Tag -->
+                        <div class="py-4 border-y border-gray-100 dark:border-gray-800 mb-6">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">$119</span>
+                                <span class="text-gray-500 dark:text-gray-400 font-medium text-sm">/ starting rate</span>
+                            </div>
+                            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Based on 1-2 bedrooms standard apartment</p>
+                        </div>
+
+                        <!-- Features List -->
+                        <ul class="space-y-3.5 text-sm text-gray-600 dark:text-gray-300 flex-grow mb-8 font-medium">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Thorough dusting of all open surfaces & shelves</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Vacuuming rugs, carpets & mopping hardwood floors</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Kitchen countertops, sink & exterior appliances</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Complete bathroom sanitization, mirrors & fixtures</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Emptying trash bins & making beds</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-gray-400 dark:text-gray-500 line-through">
+                                <i class="fas fa-times-circle mt-1 text-base shrink-0"></i>
+                                <span>Inside cabinets, fridge or oven interior</span>
+                            </li>
+                        </ul>
+
+                        <!-- CTA Button -->
+                        <a href="booking.html?package=standard"
+                            class="w-full py-4 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold text-center transition-all shadow-sm hover:shadow-md">
+                            Select Standard Clean
+                        </a>
+                    </div>
+
+                    <!-- Tier 2: Deep Detail (Highlighted) -->
+                    <div
+                        class="glass-card rounded-[2rem] p-8 md:p-10 shadow-2xl border-2 border-primary relative flex flex-col transform lg:-translate-y-4 hover:-translate-y-6 transition-all duration-300">
+                        <!-- Floating Badge -->
+                        <div
+                            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-white text-xs font-bold uppercase tracking-widest px-6 py-2 rounded-full shadow-lg">
+                            <i class="fas fa-crown text-yellow-300 mr-1.5"></i> Most Popular Choice
+                        </div>
+
+                        <div class="mb-6 mt-3">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center text-2xl mb-5 shadow-md shadow-primary/20">
+                               <i class="fas fa-magic"></i>
+                            </div>
+                            <span class="inline-block bg-primary/20 text-primary font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider mb-3">
+                                Deep Restoration
+                            </span>
+                            <h3 class="font-serif text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                                Deep Detail Clean
+                            </h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                Complete top-to-bottom scrub down for homes that haven't been professionally cleaned in 30+ days.
+                            </p>
+                        </div>
+
+                        <!-- Price Tag -->
+                        <div class="py-4 border-y border-gray-100 dark:border-gray-800 mb-6 bg-primary/5 dark:bg-primary/10 -mx-8 md:-mx-10 px-8 md:px-10">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl md:text-5xl font-extrabold text-primary">$189</span>
+                                <span class="text-gray-500 dark:text-gray-400 font-medium text-sm">/ starting rate</span>
+                            </div>
+                            <p class="text-xs text-primary font-semibold mt-1">Saves $40 compared to booking add-ons individually</p>
+                        </div>
+
+                        <!-- Features List -->
+                        <ul class="space-y-3.5 text-sm text-gray-600 dark:text-gray-300 flex-grow mb-8 font-medium">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span><strong>Everything included in Standard Clean</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Hand-washing baseboards, door frames & moldings</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Heavy kitchen stovetop degreasing & splash guard clean</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Deep bathroom tile grout scrub & limescale removal</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Detailed window sills, tracks & ceiling fan blades</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Extra sanitization of all high-touch light switches & knobs</span>
+                            </li>
+                        </ul>
+
+                        <!-- CTA Button -->
+                        <a href="booking.html?package=deep"
+                            class="w-full py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold text-center transition-all shadow-xl hover:shadow-primary/40 hover:scale-[1.02] pulse-primary-cta text-base">
+                            Select Deep Detail Clean
+                        </a>
+                    </div>
+
+                    <!-- Tier 3: Move In / Move Out -->
+                    <div
+                        class="glass-card rounded-[2rem] p-8 md:p-10 shadow-lg border border-gray-200 dark:border-gray-800 flex flex-col hover:-translate-y-2 transition-all duration-300">
+                        <div class="mb-6">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-5">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <span class="inline-block bg-primary/10 text-primary font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider mb-3">
+                                100% Deposit Guarantee
+                            </span>
+                            <h3 class="font-serif text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                                Move In / Out
+                            </h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                For empty homes transitioning owners or tenants. Guaranteed to pass landlord lease inspections.
+                            </p>
+                        </div>
+
+                        <!-- Price Tag -->
+                        <div class="py-4 border-y border-gray-100 dark:border-gray-800 mb-6">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">$249</span>
+                                <span class="text-gray-500 dark:text-gray-400 font-medium text-sm">/ starting rate</span>
+                            </div>
+                            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Full property inspection checklist included</p>
+                        </div>
+
+                        <!-- Features List -->
+                        <ul class="space-y-3.5 text-sm text-gray-600 dark:text-gray-300 flex-grow mb-8 font-medium">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span><strong>Everything in Deep Clean plus empty-space scrub</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Inside all empty kitchen & bathroom cabinets & drawers</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Inside oven interior deep degreasing included</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Inside refrigerator & freezer sanitization included</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Closet shelving wiped down & spot wall cleaning</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-primary mt-1 text-base shrink-0"></i>
+                                <span>Move-out inspection pass warranty</span>
+                            </li>
+                        </ul>
+
+                        <!-- CTA Button -->
+                        <a href="booking.html?package=move"
+                            class="w-full py-4 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold text-center transition-all shadow-sm hover:shadow-md">
+                            Select Move In/Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== INTERACTIVE BUDGET & COST ESTIMATOR ==================== -->
+        <section id="calculatorSection" class="py-20 bg-white dark:bg-darkCard transition-colors duration-300 border-y border-gray-100 dark:border-gray-800">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">
+                        Interactive Calculator
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        Calculate Your Custom Cleaning Estimate
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg">
+                        Customize your service parameters below to find the exact price within your household budget.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+                    <!-- Controls (Left 7 cols) -->
+                    <div class="lg:col-span-7 space-y-8 bg-gray-50 dark:bg-darkBg p-8 md:p-10 rounded-3xl border border-gray-200 dark:border-gray-800">
+                        
+                        <!-- 1. Home Size -->
+                        <div>
+                            <label class="block text-sm font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-3">
+                                1. Select Home Size
+                            </label>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="bedroomOptions">
+                                <button type="button" data-bedrooms="1" data-add="0"
+                                    class="calc-bed-btn option-pill py-3 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-sm text-center hover:border-primary active bg-primary text-white border-primary">
+                                    1 Bedroom
+                                </button>
+                                <button type="button" data-bedrooms="2" data-add="30"
+                                    class="calc-bed-btn option-pill py-3 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-sm text-center hover:border-primary bg-white dark:bg-darkCard">
+                                    2 Bedrooms
+                                </button>
+                                <button type="button" data-bedrooms="3" data-add="60"
+                                    class="calc-bed-btn option-pill py-3 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-sm text-center hover:border-primary bg-white dark:bg-darkCard">
+                                    3 Bedrooms
+                                </button>
+                                <button type="button" data-bedrooms="4" data-add="90"
+                                    class="calc-bed-btn option-pill py-3 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-sm text-center hover:border-primary bg-white dark:bg-darkCard">
+                                    4+ Bedrooms
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 2. Cleaning Tier -->
+                        <div>
+                            <label class="block text-sm font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-3">
+                                2. Service Package Tier
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="packageOptions">
+                                <button type="button" data-package="standard" data-base="119"
+                                    class="calc-pkg-btn option-pill py-3.5 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-sm text-center hover:border-primary active bg-primary text-white border-primary">
+                                    Standard Clean
+                                </button>
+                                <button type="button" data-package="deep" data-base="189"
+                                    class="calc-pkg-btn option-pill py-3.5 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-sm text-center hover:border-primary bg-white dark:bg-darkCard">
+                                    Deep Detail Clean
+                                </button>
+                                <button type="button" data-package="move" data-base="249"
+                                    class="calc-pkg-btn option-pill py-3.5 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-sm text-center hover:border-primary bg-white dark:bg-darkCard">
+                                    Move In / Out
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 3. Frequency & Savings -->
+                        <div>
+                            <label class="block text-sm font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-3">
+                                3. Cleaning Frequency (Save More)
+                            </label>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="freqOptions">
+                                <button type="button" data-discount="0" data-freq="onetime"
+                                    class="calc-freq-btn option-pill py-3 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-xs sm:text-sm text-center hover:border-primary active bg-primary text-white border-primary">
+                                    One-Time
+                                </button>
+                                <button type="button" data-discount="0.10" data-freq="monthly"
+                                    class="calc-freq-btn option-pill py-3 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-xs sm:text-sm text-center hover:border-primary bg-white dark:bg-darkCard">
+                                    Monthly (-10%)
+                                </button>
+                                <button type="button" data-discount="0.15" data-freq="biweekly"
+                                    class="calc-freq-btn option-pill py-3 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-xs sm:text-sm text-center hover:border-primary bg-white dark:bg-darkCard">
+                                    Bi-Weekly (-15%)
+                                </button>
+                                <button type="button" data-discount="0.20" data-freq="weekly"
+                                    class="calc-freq-btn option-pill py-3 px-4 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold text-xs sm:text-sm text-center hover:border-primary bg-white dark:bg-darkCard">
+                                    Weekly (-20%)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 4. Optional Add-ons -->
+                        <div>
+                            <label class="block text-sm font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-3">
+                                4. Optional Add-On Services
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="addonsOptions">
+                                <label class="flex items-center justify-between p-3.5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkCard cursor-pointer hover:border-primary">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" data-price="30" data-name="fridge" class="calc-addon-chk w-5 h-5 text-primary rounded focus:ring-primary">
+                                        <span class="text-sm font-medium">Inside Refrigerator</span>
+                                    </div>
+                                    <span class="text-xs font-bold text-primary">+$30</span>
+                                </label>
+                                <label class="flex items-center justify-between p-3.5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkCard cursor-pointer hover:border-primary">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" data-price="30" data-name="oven" class="calc-addon-chk w-5 h-5 text-primary rounded focus:ring-primary">
+                                        <span class="text-sm font-medium">Inside Oven Scrub</span>
+                                    </div>
+                                    <span class="text-xs font-bold text-primary">+$30</span>
+                                </label>
+                                <label class="flex items-center justify-between p-3.5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkCard cursor-pointer hover:border-primary">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" data-price="40" data-name="windows" class="calc-addon-chk w-5 h-5 text-primary rounded focus:ring-primary">
+                                        <span class="text-sm font-medium">Interior Windows</span>
+                                    </div>
+                                    <span class="text-xs font-bold text-primary">+$40</span>
+                                </label>
+                                <label class="flex items-center justify-between p-3.5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-darkCard cursor-pointer hover:border-primary">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" data-price="25" data-name="pethair" class="calc-addon-chk w-5 h-5 text-primary rounded focus:ring-primary">
+                                        <span class="text-sm font-medium">Pet Hair Extraction</span>
+                                    </div>
+                                    <span class="text-xs font-bold text-primary">+$25</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Quote Summary Box (Right 5 cols) -->
+                    <div class="lg:col-span-5 sticky top-28">
+                        <div class="glass-card rounded-[2.5rem] p-8 md:p-10 shadow-2xl border-2 border-primary/40 bg-white dark:bg-darkCard">
+                            <span class="text-xs font-extrabold uppercase tracking-widest text-primary mb-2 block">
+                                Live Cost Summary
+                            </span>
+                            <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                                Your Instant Estimate
+                            </h3>
+
+                            <div class="space-y-4 text-sm pb-6 border-b border-gray-200 dark:border-gray-700">
+                                <div class="flex justify-between items-center text-gray-600 dark:text-gray-300">
+                                    <span>Selected Package:</span>
+                                    <span id="summaryPkgName" class="font-bold text-gray-900 dark:text-white">Standard Clean</span>
+                                </div>
+                                <div class="flex justify-between items-center text-gray-600 dark:text-gray-300">
+                                    <span>Home Size:</span>
+                                    <span id="summaryBedName" class="font-bold text-gray-900 dark:text-white">1 Bedroom</span>
+                                </div>
+                                <div class="flex justify-between items-center text-gray-600 dark:text-gray-300">
+                                    <span>Base Package Rate:</span>
+                                    <span id="summaryBasePrice" class="font-semibold text-gray-900 dark:text-white">$119</span>
+                                </div>
+                                <div class="flex justify-between items-center text-emerald-600 dark:text-emerald-400">
+                                    <span>Frequency Discount:</span>
+                                    <span id="summaryDiscount" class="font-semibold">-$0</span>
+                                </div>
+                                <div class="flex justify-between items-center text-gray-600 dark:text-gray-300">
+                                    <span>Selected Add-Ons:</span>
+                                    <span id="summaryAddonsPrice" class="font-semibold text-gray-900 dark:text-white">+$0</span>
+                                </div>
+                            </div>
+
+                            <!-- Total -->
+                            <div class="py-6 flex justify-between items-baseline">
+                                <div>
+                                    <span class="block text-xs uppercase tracking-wider text-gray-400 font-semibold">Estimated Total</span>
+                                    <span class="text-xs text-gray-500">Taxes & supplies included</span>
+                                </div>
+                                <div class="text-right">
+                                    <span id="summaryTotalPrice" class="text-4xl md:text-5xl font-black text-primary">$119</span>
+                                </div>
+                            </div>
+
+                            <!-- Final Action CTA -->
+                            <a id="btnBookCustomPlan" href="booking.html?package=standard&bedrooms=1"
+                                class="block w-full py-4 text-center rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold text-base shadow-xl hover:shadow-primary/40 hover:scale-[1.02] transition-all pulse-primary-cta">
+                                <i class="fas fa-calendar-check mr-2"></i> Book This Custom Plan
+                            </a>
+
+                            <div class="mt-4 text-center">
+                                <p class="text-xs text-gray-400 dark:text-gray-500">
+                                    <i class="fas fa-lock mr-1 text-primary"></i> 100% Risk-Free: Cancel or change anytime
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SIDE-BY-SIDE PACKAGE COMPARISON TABLE ==================== -->
+        <section class="py-20 bg-gray-50 dark:bg-darkBg transition-colors duration-300">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Feature Matrix</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        Compare Our Service Plans
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg">
+                        See exactly what tasks are tackled in each package to choose the ideal fit.
+                    </p>
+                </div>
+
+                <div class="overflow-x-auto rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm bg-white dark:bg-darkCard">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-darkBg/60 text-gray-900 dark:text-white font-serif text-base">
+                                <th class="p-6">Included Cleaning Tasks</th>
+                                <th class="p-6 text-center">Standard Clean</th>
+                                <th class="p-6 text-center text-primary font-bold bg-primary/5 dark:bg-primary/10">Deep Detail Clean</th>
+                                <th class="p-6 text-center">Move In / Move Out</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-gray-600 dark:text-gray-300">
+                            <tr>
+                                <td class="p-5 font-semibold text-gray-900 dark:text-white">Dusting all accessible furniture & surfaces</td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary bg-primary/5 dark:bg-primary/10"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-5 font-semibold text-gray-900 dark:text-white">Vacuuming carpets, rugs & mopping hard floors</td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary bg-primary/5 dark:bg-primary/10"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-5 font-semibold text-gray-900 dark:text-white">Kitchen exterior appliances & countertops</td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary bg-primary/5 dark:bg-primary/10"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-5 font-semibold text-gray-900 dark:text-white">Bathroom sanitization, mirrors & fixtures</td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary bg-primary/5 dark:bg-primary/10"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-5 font-semibold text-gray-900 dark:text-white">Hand-washing baseboards & door frames</td>
+                                <td class="p-5 text-center text-gray-300 dark:text-gray-600"><i class="fas fa-minus"></i></td>
+                                <td class="p-5 text-center text-primary bg-primary/5 dark:bg-primary/10"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-5 font-semibold text-gray-900 dark:text-white">Stovetop heavy degreasing & hood clean</td>
+                                <td class="p-5 text-center text-gray-300 dark:text-gray-600"><i class="fas fa-minus"></i></td>
+                                <td class="p-5 text-center text-primary bg-primary/5 dark:bg-primary/10"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-5 font-semibold text-gray-900 dark:text-white">Bathroom tile grout descaling & limescale scrub</td>
+                                <td class="p-5 text-center text-gray-300 dark:text-gray-600"><i class="fas fa-minus"></i></td>
+                                <td class="p-5 text-center text-primary bg-primary/5 dark:bg-primary/10"><i class="fas fa-check-circle text-lg"></i></td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-5 font-semibold text-gray-900 dark:text-white">Inside empty kitchen & bathroom cabinets</td>
+                                <td class="p-5 text-center text-gray-300 dark:text-gray-600"><i class="fas fa-minus"></i></td>
+                                <td class="p-5 text-center text-gray-300 dark:text-gray-600 bg-primary/5 dark:bg-primary/10"><i class="fas fa-minus"></i></td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-5 font-semibold text-gray-900 dark:text-white">Inside oven & inside refrigerator deep clean</td>
+                                <td class="p-5 text-center text-gray-300 dark:text-gray-600"><i class="fas fa-minus"></i></td>
+                                <td class="p-5 text-center text-gray-300 dark:text-gray-600 bg-primary/5 dark:bg-primary/10"><i class="fas fa-minus"></i></td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-5 font-semibold text-gray-900 dark:text-white">Move-Out Lease Inspection Warranty</td>
+                                <td class="p-5 text-center text-gray-300 dark:text-gray-600"><i class="fas fa-minus"></i></td>
+                                <td class="p-5 text-center text-gray-300 dark:text-gray-600 bg-primary/5 dark:bg-primary/10"><i class="fas fa-minus"></i></td>
+                                <td class="p-5 text-center text-primary"><i class="fas fa-check-circle text-lg"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== OPTIONAL ADD-ONS SECTION ==================== -->
+        <section class="py-20 bg-white dark:bg-darkCard transition-colors duration-300 border-t border-gray-100 dark:border-gray-800">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Custom Touch</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        Popular Cleaning Add-Ons
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg">
+                        Tailor your booking with high-impact extras. Add any of these with one click during checkout.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Addon 1 -->
+                    <div
+                        class="p-6 rounded-3xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-darkBg hover:border-primary hover:shadow-lg text-center transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-base mb-1">Inside Fridge</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Shelves & bin sanitize</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm">+ $30</span>
+                    </div>
+
+                    <!-- Addon 2 -->
+                    <div
+                        class="p-6 rounded-3xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-darkBg hover:border-primary hover:shadow-lg text-center transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-fire-burner"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-base mb-1">Inside Oven</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Grease & carbon scrub</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm">+ $30</span>
+                    </div>
+
+                    <!-- Addon 3 -->
+                    <div
+                        class="p-6 rounded-3xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-darkBg hover:border-primary hover:shadow-lg text-center transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-window-maximize"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-base mb-1">Interior Windows</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Streak-free glass clean</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm">+ $40</span>
+                    </div>
+
+                    <!-- Addon 4 -->
+                    <div
+                        class="p-6 rounded-3xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-darkBg hover:border-primary hover:shadow-lg text-center transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-base mb-1">Pet Hair Detail</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Upholstery extraction</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm">+ $25</span>
+                    </div>
+
+                    <!-- Addon 5 -->
+                    <div
+                        class="p-6 rounded-3xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-darkBg hover:border-primary hover:shadow-lg text-center transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-rug"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-base mb-1">Carpet Shampoo</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Per room deep wash</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm">+ $60/room</span>
+                    </div>
+
+                    <!-- Addon 6 -->
+                    <div
+                        class="p-6 rounded-3xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-darkBg hover:border-primary hover:shadow-lg text-center transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-cubes-stacked"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-base mb-1">Inside Cabinets</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Crumb & dust wipeout</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm">+ $45</span>
+                    </div>
+
+                    <!-- Addon 7 -->
+                    <div
+                        class="p-6 rounded-3xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-darkBg hover:border-primary hover:shadow-lg text-center transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-primary/10 text-primary mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-shirt"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-base mb-1">Laundry Wash</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Wash, dry & fold</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm">+ $20/load</span>
+                    </div>
+
+                    <!-- Addon 8 -->
+                    <div
+                        class="p-6 rounded-3xl border border-emerald-200 dark:border-emerald-800 bg-gray-50 dark:bg-darkBg hover:border-emerald-500 hover:shadow-lg text-center transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 dark:bg-emerald-950 dark:text-emerald-400 mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-spray-can-sparkles"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-base mb-1">Eco-Green Kit</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">100% plant-based supplies</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-950 dark:text-emerald-300 font-bold text-sm">FREE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PRICING FAQ ACCORDION ==================== -->
+        <section class="py-20 bg-gray-50 dark:bg-darkBg transition-colors duration-300 border-t border-gray-100 dark:border-gray-800">
+            <div class="max-w-[1000px] mx-auto px-6 md:px-12">
+                <div class="text-center max-w-xl mx-auto mb-12">
+                    <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Clear Answers</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+                        Pricing Frequently Asked Questions
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm md:text-base">
+                        Everything you need to know about our rates, billing, and booking policies. Click any question below to view its answer.
+                    </p>
+                </div>
+
+                <div class="space-y-4" id="faqAccordion">
+                    <!-- FAQ 1 -->
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden bg-white dark:bg-darkCard shadow-sm hover:shadow-md transition-all">
+                        <button class="pricing-faq-btn w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer focus:outline-none transition-colors hover:bg-gray-50/70 dark:hover:bg-gray-800/50" aria-expanded="false">
+                            <span class="font-bold text-base md:text-lg text-gray-900 dark:text-white flex items-center gap-3">
+                                <i class="fas fa-circle-question text-primary text-lg"></i>
+                                <span>Are there any hidden fees or extra charges on the day?</span>
+                            </span>
+                            <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary ml-4 flex-shrink-0 transition-transform duration-300">
+                                <i class="fas fa-plus icon text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="pricing-faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <p class="px-6 pb-6 pt-2 text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed border-t border-gray-100 dark:border-gray-800/80">
+                                None at all. All our quotes and package prices are 100% transparent flat rates. We only charge extra if you explicitly request an optional add-on service or if your home size substantially exceeds what was initially booked. What you see is what you pay.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden bg-white dark:bg-darkCard shadow-sm hover:shadow-md transition-all">
+                        <button class="pricing-faq-btn w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer focus:outline-none transition-colors hover:bg-gray-50/70 dark:hover:bg-gray-800/50" aria-expanded="false">
+                            <span class="font-bold text-base md:text-lg text-gray-900 dark:text-white flex items-center gap-3">
+                                <i class="fas fa-circle-question text-primary text-lg"></i>
+                                <span>Do I need to provide cleaning supplies or vacuum cleaners?</span>
+                            </span>
+                            <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary ml-4 flex-shrink-0 transition-transform duration-300">
+                                <i class="fas fa-plus icon text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="pricing-faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <p class="px-6 pb-6 pt-2 text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed border-t border-gray-100 dark:border-gray-800/80">
+                                No, our certified cleaners arrive fully equipped with professional-grade HEPA vacuums, fresh microfiber cloths, extendable dusters, and eco-friendly cleaning detergents. You don't have to provide a single thing unless you specifically prefer us to use your own specialized product.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden bg-white dark:bg-darkCard shadow-sm hover:shadow-md transition-all">
+                        <button class="pricing-faq-btn w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer focus:outline-none transition-colors hover:bg-gray-50/70 dark:hover:bg-gray-800/50" aria-expanded="false">
+                            <span class="font-bold text-base md:text-lg text-gray-900 dark:text-white flex items-center gap-3">
+                                <i class="fas fa-circle-question text-primary text-lg"></i>
+                                <span>How does the 100% Satisfaction Guarantee work?</span>
+                            </span>
+                            <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary ml-4 flex-shrink-0 transition-transform duration-300">
+                                <i class="fas fa-plus icon text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="pricing-faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <p class="px-6 pb-6 pt-2 text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed border-t border-gray-100 dark:border-gray-800/80">
+                                If any area or item on your service checklist was not completed to your 100% satisfaction, notify our support team within 24 hours of completion. We will dispatch a professional team back to your home to re-clean the specific area completely free of charge.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden bg-white dark:bg-darkCard shadow-sm hover:shadow-md transition-all">
+                        <button class="pricing-faq-btn w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer focus:outline-none transition-colors hover:bg-gray-50/70 dark:hover:bg-gray-800/50" aria-expanded="false">
+                            <span class="font-bold text-base md:text-lg text-gray-900 dark:text-white flex items-center gap-3">
+                                <i class="fas fa-circle-question text-primary text-lg"></i>
+                                <span>When and how do I pay for my cleaning?</span>
+                            </span>
+                            <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary ml-4 flex-shrink-0 transition-transform duration-300">
+                                <i class="fas fa-plus icon text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="pricing-faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <p class="px-6 pb-6 pt-2 text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed border-t border-gray-100 dark:border-gray-800/80">
+                                We accept all major credit and debit cards online via our 256-bit encrypted checkout. When you book, a temporary pre-authorization hold is placed on your card. Your payment is only processed and charged after the cleaning is finished and approved.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden bg-white dark:bg-darkCard shadow-sm hover:shadow-md transition-all">
+                        <button class="pricing-faq-btn w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer focus:outline-none transition-colors hover:bg-gray-50/70 dark:hover:bg-gray-800/50" aria-expanded="false">
+                            <span class="font-bold text-base md:text-lg text-gray-900 dark:text-white flex items-center gap-3">
+                                <i class="fas fa-circle-question text-primary text-lg"></i>
+                                <span>Can I reschedule or cancel without penalty?</span>
+                            </span>
+                            <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary ml-4 flex-shrink-0 transition-transform duration-300">
+                                <i class="fas fa-plus icon text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="pricing-faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <p class="px-6 pb-6 pt-2 text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed border-t border-gray-100 dark:border-gray-800/80">
+                                Yes! You can reschedule or cancel your booking with zero fees up to 24 hours before your scheduled appointment time. You can manage this easily through your client dashboard or by contacting our friendly support team.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden bg-white dark:bg-darkCard shadow-sm hover:shadow-md transition-all">
+                        <button class="pricing-faq-btn w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer focus:outline-none transition-colors hover:bg-gray-50/70 dark:hover:bg-gray-800/50" aria-expanded="false">
+                            <span class="font-bold text-base md:text-lg text-gray-900 dark:text-white flex items-center gap-3">
+                                <i class="fas fa-circle-question text-primary text-lg"></i>
+                                <span>How do recurring subscription discounts work?</span>
+                            </span>
+                            <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary ml-4 flex-shrink-0 transition-transform duration-300">
+                                <i class="fas fa-plus icon text-sm transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="pricing-faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <p class="px-6 pb-6 pt-2 text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed border-t border-gray-100 dark:border-gray-800/80">
+                                When you choose a recurring schedule (Weekly 20% off, Bi-Weekly 15% off, or Monthly 10% off), your savings are locked in for every visit. There are no contracts or commitments—you can skip a week, pause, or cancel anytime directly from your dashboard.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CALL TO ACTION BANNER ==================== -->
+        <section class="py-20 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 text-center">
+                <span class="text-accent uppercase tracking-widest text-xs md:text-sm font-extrabold mb-3 block">
+                    Fast & Seamless Experience
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto leading-tight">
+                    Ready to Experience a Spotless, Stress-Free Home?
+                </h2>
+                <p class="text-blue-100 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Book online in 60 seconds with instant confirmation. Experience why thousands of homeowners trust CleanHome.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="booking.html"
+                        class="w-full sm:w-auto px-9 py-4 rounded-full bg-white text-primary font-bold text-lg hover:bg-gray-100 transition-all shadow-xl hover:scale-105">
+                        <i class="fas fa-calendar-check mr-2"></i> Book Online Now
+                    </a>
+                    <a href="contact.html"
+                        class="w-full sm:w-auto px-9 py-4 rounded-full border-2 border-white/80 hover:bg-white/10 text-white font-bold text-lg transition-all backdrop-blur-sm">
+                        <i class="fas fa-envelope mr-2"></i> Inquire with Team
+                    </a>
+                </div>
+
+                <div class="mt-8 flex items-center justify-center gap-6 text-sm text-blue-100 font-medium">
+                    <span><i class="fas fa-check text-accent mr-1"></i> No Credit Card Required for Inquiries</span>
+                    <span><i class="fas fa-check text-accent mr-1"></i> Friendly 24/7 Support</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-white dark:bg-darkCard pt-16 pb-8 mt-auto transition-colors duration-300 border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+
+            <!-- Top Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <i
+                            class="fas fa-broom text-3xl text-primary bg-clip-text bg-gradient-to-br from-primary to-secondary"></i>
+                        <span
+                            class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">CleanHome</span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 text-sm">
+                        Transforming homes into spotless sanctuaries. Reliable, professional, and thorough housekeeping
+                        services for your everyday life.
+                    </p>
+                    <div class="flex items-center gap-3 text-primary text-sm font-semibold">
+                        <i class="fas fa-phone-volume"></i> (800) 555-CLEAN
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3
+                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
+                        QuickLinks</h3>
+                    <ul class="flex flex-col gap-3.5 text-gray-600 dark:text-gray-400 text-sm">
+                        <li><a href="index.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Home</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">About</a>
+                        </li>
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Service</a>
+                        </li>
+                        <li><a href="pricing.html"
+                                class="text-primary font-semibold hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Pricing</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3
+                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
+                        Services</h3>
+                    <ul class="flex flex-col gap-3.5 text-gray-600 dark:text-gray-400 text-sm">
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Standard
+                                Cleaning</a></li>
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Deep
+                                Housekeeping</a></li>
+                        <li><a href="service.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Move-In
+                                / Move-Out</a></li>
+                        <li><a href="booking.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300 rtl:hover:-translate-x-1">Online
+                                Booking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Connect -->
+                <div>
+                    <h3
+                        class="text-primary font-bold text-lg mb-6 uppercase tracking-widest border-b-2 border-primary pb-3 inline-block">
+                        Connect</h3>
+                    <ul class="flex flex-col gap-3.5 text-gray-600 dark:text-gray-400 text-sm">
+                        <li><a href="#"
+                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
+                                    class="fab fa-facebook-f w-5 text-center text-primary"></i> Facebook</a></li>
+                        <li><a href="#"
+                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
+                                    class="fab fa-instagram w-5 text-center text-primary"></i> Instagram</a></li>
+                        <li><a href="#"
+                                class="flex items-center gap-3 hover:text-primary transition-colors hover:translate-x-1 duration-300 rtl:hover:-translate-x-1"><i
+                                    class="fab fa-x-twitter w-5 text-center text-primary"></i> X (Twitter)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Middle & Bottom Footer -->
+            <div
+                class="border-y border-gray-200 dark:border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <span class="text-primary font-bold text-lg font-serif">CleanHome Service</span>
+                <div class="flex gap-6 text-sm font-medium text-gray-600 dark:text-gray-400">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    <a href="faq.html" class="hover:text-primary transition-colors">FAQ</a>
+                </div>
+            </div>
+
+            <div class="pt-6 text-center text-gray-500 dark:text-gray-500 text-xs">
+                © 2026 CleanHome Housekeeping Service. All rights reserved. Professional residential & housekeeping services.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Mobile Menu Logic
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileNavMenu');
+            const overlay = document.getElementById('mobileOverlay');
+
+            function toggleMenu() {
+                const isRtl = document.documentElement.dir === 'rtl';
+
+                if (isRtl) {
+                    mobileMenu.classList.toggle('rtl:-left-full');
+                    mobileMenu.classList.toggle('rtl:left-0');
+                } else {
+                    mobileMenu.classList.toggle('-right-full');
+                    mobileMenu.classList.toggle('right-0');
+                }
+
+                overlay.classList.toggle('hidden');
+                document.body.classList.toggle('overflow-hidden');
+
+                const icon = hamburger.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            }
+
+            hamburger?.addEventListener('click', toggleMenu);
+            overlay?.addEventListener('click', toggleMenu);
+
+            // 2. Theme Toggle (Dark/Light)
+            const themeToggle = document.getElementById('themeToggle');
+            const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+
+            function toggleTheme() {
+                document.documentElement.classList.toggle('dark');
+                const isDark = document.documentElement.classList.contains('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            }
+
+            themeToggle?.addEventListener('click', toggleTheme);
+            mobileThemeToggle?.addEventListener('click', toggleTheme);
+
+            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+
+            // 3. RTL Toggle
+            const rtlToggle = document.getElementById('rtlToggle');
+            const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+
+            function toggleRTL() {
+                const html = document.documentElement;
+                html.dir = html.dir === 'rtl' ? 'ltr' : 'rtl';
+                localStorage.setItem('direction', html.dir);
+            }
+
+            rtlToggle?.addEventListener('click', toggleRTL);
+            mobileRtlToggle?.addEventListener('click', toggleRTL);
+
+            if (localStorage.getItem('direction') === 'rtl') {
+                document.documentElement.dir = 'rtl';
+            }
+
+            // 4. Interactive Budget & Cost Estimator Logic
+            let currentBase = 119;
+            let currentBedAdd = 0;
+            let currentDiscount = 0;
+            let currentPkg = 'standard';
+            let currentBed = 1;
+            let currentFreq = 'onetime';
+
+            const summaryPkgName = document.getElementById('summaryPkgName');
+            const summaryBedName = document.getElementById('summaryBedName');
+            const summaryBasePrice = document.getElementById('summaryBasePrice');
+            const summaryDiscount = document.getElementById('summaryDiscount');
+            const summaryAddonsPrice = document.getElementById('summaryAddonsPrice');
+            const summaryTotalPrice = document.getElementById('summaryTotalPrice');
+            const btnBookCustomPlan = document.getElementById('btnBookCustomPlan');
+
+            function calculateEstimate() {
+                // Calculate add-ons sum
+                let addonsTotal = 0;
+                let activeAddons = [];
+                document.querySelectorAll('.calc-addon-chk:checked').forEach(chk => {
+                    addonsTotal += parseFloat(chk.getAttribute('data-price') || 0);
+                    activeAddons.push(chk.getAttribute('data-name'));
+                });
+
+                const subtotal = currentBase + currentBedAdd;
+                const discountAmount = Math.round(subtotal * currentDiscount);
+                const finalTotal = subtotal - discountAmount + addonsTotal;
+
+                // Update UI display
+                if (summaryBasePrice) summaryBasePrice.textContent = `$${subtotal}`;
+                if (summaryDiscount) summaryDiscount.textContent = `-$${discountAmount}`;
+                if (summaryAddonsPrice) summaryAddonsPrice.textContent = `+$${addonsTotal}`;
+                if (summaryTotalPrice) summaryTotalPrice.textContent = `$${finalTotal}`;
+
+                // Update Booking redirect URL with query params
+                if (btnBookCustomPlan) {
+                    const addonStr = activeAddons.length ? `&addons=${activeAddons.join(',')}` : '';
+                    btnBookCustomPlan.href = `booking.html?package=${currentPkg}&bedrooms=${currentBed}&freq=${currentFreq}${addonStr}`;
+                }
+            }
+
+            // Bed selection
+            document.querySelectorAll('.calc-bed-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.calc-bed-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-primary', 'text-white', 'border-primary');
+                        b.classList.add('bg-white', 'dark:bg-darkCard');
+                    });
+                    btn.classList.add('active', 'bg-primary', 'text-white', 'border-primary');
+                    btn.classList.remove('bg-white', 'dark:bg-darkCard');
+
+                    currentBedAdd = parseFloat(btn.getAttribute('data-add') || 0);
+                    currentBed = btn.getAttribute('data-bedrooms');
+                    if (summaryBedName) summaryBedName.textContent = `${currentBed} Bedroom${currentBed > 1 ? 's' : ''}`;
+                    calculateEstimate();
+                });
+            });
+
+            // Package selection
+            document.querySelectorAll('.calc-pkg-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.calc-pkg-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-primary', 'text-white', 'border-primary');
+                        b.classList.add('bg-white', 'dark:bg-darkCard');
+                    });
+                    btn.classList.add('active', 'bg-primary', 'text-white', 'border-primary');
+                    btn.classList.remove('bg-white', 'dark:bg-darkCard');
+
+                    currentBase = parseFloat(btn.getAttribute('data-base') || 119);
+                    currentPkg = btn.getAttribute('data-package');
+                    const pkgNames = { 'standard': 'Standard Clean', 'deep': 'Deep Detail Clean', 'move': 'Move In / Out' };
+                    if (summaryPkgName) summaryPkgName.textContent = pkgNames[currentPkg] || 'Standard Clean';
+                    calculateEstimate();
+                });
+            });
+
+            // Frequency selection
+            document.querySelectorAll('.calc-freq-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.calc-freq-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-primary', 'text-white', 'border-primary');
+                        b.classList.add('bg-white', 'dark:bg-darkCard');
+                    });
+                    btn.classList.add('active', 'bg-primary', 'text-white', 'border-primary');
+                    btn.classList.remove('bg-white', 'dark:bg-darkCard');
+
+                    currentDiscount = parseFloat(btn.getAttribute('data-discount') || 0);
+                    currentFreq = btn.getAttribute('data-freq');
+                    calculateEstimate();
+                });
+            });
+
+            // Add-on checkboxes
+            document.querySelectorAll('.calc-addon-chk').forEach(chk => {
+                chk.addEventListener('change', calculateEstimate);
+            });
+
+            // Initial calculation
+            calculateEstimate();
+
+            // 5. Clear Answers / Pricing FAQ Accordion Logic
+            // Answers are hidden by default. Clicking a question reveals its answer; clicking again or another question hides it.
+            const pricingFaqButtons = document.querySelectorAll('.pricing-faq-btn');
+            pricingFaqButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('.icon');
+                    const iconWrapper = icon ? icon.parentElement : null;
+                    const isAlreadyOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+                    // Close all FAQ answers
+                    document.querySelectorAll('.pricing-faq-answer').forEach(ans => {
+                        ans.style.maxHeight = null;
+                    });
+                    document.querySelectorAll('.pricing-faq-btn').forEach(b => {
+                        b.setAttribute('aria-expanded', 'false');
+                        const ic = b.querySelector('.icon');
+                        if (ic) {
+                            ic.classList.remove('fa-minus');
+                            ic.classList.add('fa-plus');
+                            if (ic.parentElement) {
+                                ic.parentElement.classList.remove('bg-primary', 'text-white');
+                                ic.parentElement.classList.add('bg-primary/10', 'text-primary');
+                            }
+                        }
+                    });
+
+                    // If clicked item was not open, open it
+                    if (!isAlreadyOpen) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        btn.setAttribute('aria-expanded', 'true');
+                        if (icon) {
+                            icon.classList.remove('fa-plus');
+                            icon.classList.add('fa-minus');
+                        }
+                        if (iconWrapper) {
+                            iconWrapper.classList.remove('bg-primary/10', 'text-primary');
+                            iconWrapper.classList.add('bg-primary', 'text-white');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
